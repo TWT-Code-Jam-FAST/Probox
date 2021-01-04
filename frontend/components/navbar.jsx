@@ -27,7 +27,6 @@ export default function Navbar(props) {
       <Typography variant="h6" className={classes.title}>
         {props.title}
       </Typography>
-      <Button color="inherit">{props.text}</Button>
     </Toolbar>
   </AppBar>;
 }
