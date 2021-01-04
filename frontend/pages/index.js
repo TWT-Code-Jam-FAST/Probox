@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 
 import Navbar from '../components/navbar';
+import Home from  '../components/home'
 
 export default function Home() {
   return (
@@ -17,11 +18,7 @@ export default function Home() {
 
       <Navbar title="Probox" text="LOGIN"/>
 
-      <main className={styles.main}>
-        <h2>Hello, Probox!</h2>
-
-        <Link href="/api/hello">This is a simple api (Click me)</Link>
-      </main>
+      <Home/>
     </div>
   );
 }
