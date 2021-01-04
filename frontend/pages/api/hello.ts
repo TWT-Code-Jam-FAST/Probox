@@ -1,4 +1,4 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+// for reference: https://nextjs.org/docs/api-routes/introduction
 
 export default (req, res) => {
     res.statusCode = 200
