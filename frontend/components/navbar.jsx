@@ -2,6 +2,8 @@ import React from "react";
 import {AppBar, Toolbar, IconButton, Typography, Button} from "@material-ui/core";
 import MenuIcon from '@material-ui/icons/Menu';
 
+import Time from "./time";
+
 import {makeStyles} from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -27,6 +29,7 @@ export default function Navbar(props) {
       <Typography variant="h6" className={classes.title}>
         {props.title}
       </Typography>
+      <Time/>
     </Toolbar>
   </AppBar>;
 }
