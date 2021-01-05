@@ -5,5 +5,5 @@ export default (req, res) => {
 
     const crrTime: Date = new Date()
 
-    res.json({timezone: "locale", time: crrTime.toLocaleString()})
+    res.json({timezone: "locale", time: crrTime.toDateString()})
 }
