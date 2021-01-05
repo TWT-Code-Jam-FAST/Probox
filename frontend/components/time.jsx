@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {Typography} from "@material-ui/core";
 
 class Time extends Component {
   constructor(props) {
@@ -14,9 +15,11 @@ class Time extends Component {
 
   render() {
     return (
-      <div>
-        <h3>{this.state.data.time}</h3>
-      </div>
+      <>
+        <Typography edge="end" variant="h6" className={this.props.className}>
+          {this.state.data.time}
+        </Typography>
+      </>
     );
   }
 }
