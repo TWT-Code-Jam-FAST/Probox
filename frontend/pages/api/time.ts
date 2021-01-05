@@ -5,5 +5,5 @@ export default (req, res) => {
 
     const crrTime: Date = new Date()
 
-    res.json({name: 'Hello, Probox!', time: crrTime.toDateString()})
+    res.json({timezone: "locale", time: crrTime.toLocaleString()})
 }
