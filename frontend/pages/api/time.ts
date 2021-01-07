@@ -20,13 +20,20 @@ export default (req, res) => {
     if (y === undefined) {
         let cache_ = x.split("-")
         x = cache_[0]
-        y = "-" + cache_[1]
+        y =  cache_[1]
     } else {
         y = "+" + y
     }
 
     if (y === undefined) {
-        y = "00:00"
+        let cache_ = x.split("Z")
+        x = cache_[0]
+        y =  cache_[1]
+        if (y === undefined) {
+            y = "00:00"
+        }
+    } else {
+        y = "-" + y
     }
 
     res.json({timezone: m.toString(), day: r.toString(), time: x.toString(), offset: y.toString()});
