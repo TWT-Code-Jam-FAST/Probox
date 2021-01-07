@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Typography} from "@material-ui/core";
 
-class Time extends Component {
+class NavbarTime extends Component {
   constructor(props) {
     super(props);
     this.state = {data: {}};
@@ -17,11 +17,11 @@ class Time extends Component {
     return (
       <>
         <Typography edge="end" variant="h6" className={this.props.className}>
-          {this.state.data.time}
+          {this.state.data.day}
         </Typography>
       </>
     );
   }
 }
 
-export default Time;
+export default NavbarTime;

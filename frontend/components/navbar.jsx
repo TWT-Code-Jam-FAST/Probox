@@ -4,7 +4,7 @@ import router from "next/router";
 import {AppBar, Toolbar, IconButton, Typography, Menu, MenuItem} from "@material-ui/core";
 import MenuIcon from '@material-ui/icons/Menu';
 
-import Time from "./time";
+import NavbarTime from "./navbarTime";
 
 export default function Navbar(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -53,7 +53,7 @@ export default function Navbar(props) {
             {props.title}
           </Typography>
 
-          <Time className="navbar time"/>
+          <NavbarTime className="navbar time"/>
         </Toolbar>
       </AppBar>
     </div>);
