@@ -29,8 +29,8 @@ export default (req, res) => {
         let cache_ = x.split("Z")
         x = cache_[0]
         y =  cache_[1]
-        if (y === undefined) {
-            y = "00:00"
+        if (y === undefined || y.length == 0) {
+            y = "+00:00"
         }
     } else {
         y = "-" + y
