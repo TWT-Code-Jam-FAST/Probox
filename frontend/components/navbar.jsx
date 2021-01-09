@@ -1,9 +1,15 @@
 import React from "react";
 import router from "next/router";
 
-import {AppBar, Toolbar, IconButton, Typography, Menu, MenuItem} from "@material-ui/core";
-import MenuIcon from '@material-ui/icons/Menu';
-
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  Menu,
+  MenuItem,
+} from "@material-ui/core";
+import MenuIcon from "@material-ui/icons/Menu";
 import NavbarTime from "./navbarTime";
 
 export default function Navbar(props) {
@@ -21,12 +27,15 @@ export default function Navbar(props) {
     <div className="navbar root">
       <AppBar position="fixed">
         <Toolbar>
-          <IconButton edge="start" className="navbar menuButton"
-                      color="inherit" aria-label="menu"
-                      onClick={handleClick}>
-            <MenuIcon/>
+          <IconButton
+            edge="start"
+            className="navbar menuButton"
+            color="inherit"
+            aria-label="menu"
+            onClick={handleClick}
+          >
+            <MenuIcon />
           </IconButton>
-
           <Menu
             id="navbar-menu"
             anchorEl={anchorEl}
@@ -34,27 +43,26 @@ export default function Navbar(props) {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-
             {
               // all menu items
               [
-                ["Time", "/api/time"], ["Tool 12345", null]
-              ].map(([i, f]) =>
-                <MenuItem
-                  onClick={f ? () => router.push(f) : handleClose}
-                >
+                ["Time", "/api/time"],
+                ["Tools", null],
+              ].map(([i, f]) => (
+                <MenuItem onClick={f ? () => router.push(f) : handleClose}>
                   {i}
-                </MenuItem>)
+                </MenuItem>
+              ))
             }
-
           </Menu>
 
           <Typography variant="h6" className="navbar title">
             {props.title}
           </Typography>
 
-          <NavbarTime className="navbar time"/>
+          <NavbarTime className="navbar time" />
         </Toolbar>
       </AppBar>
-    </div>);
+    </div>
+  );
 }
