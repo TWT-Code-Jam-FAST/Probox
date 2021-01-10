@@ -7,14 +7,10 @@ class displayTime extends Component {
     this.state = {data: {}};
   }
 
-  componentDidMount() {
+  render() {
     fetch(window.location.origin + `/api/time`)
       .then(res => res.json())
       .then(json => this.setState({data: json}));
-  }
-
-  render() {
-    this.componentDidMount();
     return (
       <div className={styles.main}>
         <h2>Timezone: {Intl.DateTimeFormat().resolvedOptions().timeZone}</h2>
