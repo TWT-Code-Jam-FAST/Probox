@@ -7,17 +7,11 @@ class NavbarTime extends Component {
     this.state = {data: {}};
   }
 
-  componentDidMount() {
-    fetch(`/api/time`)
-      .then(res => res.json())
-      .then(json => this.setState({data: json}));
-  }
-
   render() {
     return (
       <>
         <Typography edge="end" variant="h6" className={this.props.className}>
-          {this.state.data.date}
+          {new Date().toLocaleString()}
         </Typography>
       </>
     );
