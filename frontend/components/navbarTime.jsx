@@ -17,7 +17,7 @@ class NavbarTime extends Component {
     return (
       <>
         <Typography edge="end" variant="h6" className={this.props.className}>
-          {this.state.data.day}
+          {this.state.data.date}
         </Typography>
       </>
     );

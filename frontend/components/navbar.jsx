@@ -34,7 +34,7 @@ export default function Navbar(props) {
             aria-label="menu"
             onClick={handleClick}
           >
-            <MenuIcon />
+            <MenuIcon/>
           </IconButton>
           <Menu
             id="navbar-menu"
@@ -60,7 +60,7 @@ export default function Navbar(props) {
             {props.title}
           </Typography>
 
-          <NavbarTime className="navbar time" />
+          <NavbarTime className="navbar time"/>
         </Toolbar>
       </AppBar>
     </div>

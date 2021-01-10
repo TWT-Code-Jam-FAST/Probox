@@ -1,40 +1,30 @@
 // for reference: https://nextjs.org/docs/api-routes/introduction
 
 const url = require("url");
-import moment from "moment-timezone";
 
 export default (req, res) => {
     res.statusCode = 200;
 
-    const crrTime: Date = new Date();
-
     const q: string = url.parse(req.url, true).query.timezone;
     const m: string = q !== undefined && q.split("/").length == 2 ?
         q :
-        moment.tz.guess(true);
+        Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-    const [r, h]: string[] = moment.tz(crrTime.toString(), m).format().split("T");
-    const cache: string[] = h.split("+")
-    let x: string = cache[0];
-    let y: string | undefined = cache[1];
-    if (y === undefined) {
-        let cache_ = x.split("-")
-        x = cache_[0]
-        y =  cache_[1]
-    } else {
-        y = "+" + y
-    }
+    const dt = Date().toLocaleString().split(" ");
+    const day = dt[0];
+    const date = dt.slice(1, 4).join(" ");
+    const month = dt[1];
+    const dateDay = dt[2];
+    const year = dt[3];
+    const time = dt.slice(4).join(" ");
 
-    if (y === undefined) {
-        let cache_ = x.split("Z")
-        x = cache_[0]
-        y =  cache_[1]
-        if (y === undefined || y.length == 0) {
-            y = "+00:00"
-        }
-    } else {
-        y = "-" + y
-    }
-
-    res.json({timezone: m.toString(), day: r.toString(), time: x.toString(), offset: y.toString()});
+    res.json({
+        timezone: m.toString(),
+        time: time,
+        day: day,
+        date: date,
+        month: month,
+        dateDay: dateDay,
+        year: year
+    });
 }

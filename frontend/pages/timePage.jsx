@@ -1,13 +1,24 @@
 import React, { Component } from "react";
+import styles from "../styles/Home.module.css";
 
 class displayTime extends Component {
-  state = { userTimeZone: Intl.DateTimeFormat().resolvedOptions().timeZone };
+  constructor(props) {
+    super(props);
+    this.state = {data: {}};
+  }
+
+  componentDidMount() {
+    fetch(window.location.origin + `/api/time`)
+      .then(res => res.json())
+      .then(json => this.setState({data: json}));
+  }
+
   render() {
     return (
-      <React.Fragment>
-        <h1>{this.state.userTimeZone}</h1>
-        <h1>{new Date().toLocaleString()}</h1>
-      </React.Fragment>
+      <div className={styles.main}>
+        <h2>Timezone: {this.state.data.timezone}</h2>
+        <h2>Date: {this.state.data.date}</h2>
+      </div>
     );
   }
 }
