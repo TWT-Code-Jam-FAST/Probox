@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import styles from "../styles/Home.module.css";
 
 class displayTime extends Component {
@@ -8,9 +8,12 @@ class displayTime extends Component {
   }
 
   render() {
-    fetch(window.location.origin + `/api/time`)
-      .then(res => res.json())
-      .then(json => this.setState({data: json}));
+    if (typeof window !== "undefined") {
+      fetch(window.location.origin + `/api/time`)
+        .then(res => res.json())
+        .then(json => this.setState({data: json}));
+    }
+
     return (
       <div className={styles.main}>
         <h2>Timezone: {Intl.DateTimeFormat().resolvedOptions().timeZone}</h2>
