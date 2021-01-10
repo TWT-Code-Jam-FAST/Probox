@@ -1,4 +1,4 @@
-import runWandbox from '../../node-wandbox-api';
+import runWandbox from './node-wandbox-api';
 import url from 'url';
 
 // https://github.com/melpon/wandbox/blob/master/kennel2/API.rst
