@@ -8,7 +8,7 @@ export default (req, res) => {
     const q: string = url.parse(req.url, true).query.timezone;
     const m: string = q !== undefined && q.split("/").length == 2 ?
         q :
-        Intl.DateTimeFormat().resolvedOptions().timeZone;
+        new Intl.DateTimeFormat().resolvedOptions().timeZone;
 
     const dt = Date().toLocaleString().split(" ");
     const day = dt[0];

@@ -16,7 +16,7 @@ class displayTime extends Component {
 
     return (
       <div className={styles.main}>
-        <h2>Timezone: {Intl.DateTimeFormat().resolvedOptions().timeZone}</h2>
+        <h2>Timezone: {new Intl.DateTimeFormat().resolvedOptions().timeZone}</h2>
         <h2>Timezone api: {this.state.data.timezone}</h2>
         <h2>Date: {this.state.data.date}</h2>
       </div>
