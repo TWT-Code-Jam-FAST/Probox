@@ -50,7 +50,10 @@ export default function Navbar(props) {
                 ["Time", "/time"],
                 ["Compiler", "/compiler"],
               ].map(([i, f]) => (
-                <MenuItem onClick={f ? () => router.push(f) : handleClose}>
+                <MenuItem onClick={f ? () => {
+                  router.push(f).then();
+                  handleClose();
+                } : handleClose}>
                   {i}
                 </MenuItem>
               ))
