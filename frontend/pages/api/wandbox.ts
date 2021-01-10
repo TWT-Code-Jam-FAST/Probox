@@ -12,6 +12,7 @@ export default function (req: http.IncomingMessage, res: http.ServerResponse) {
     if (typeof query.code === "undefined" || typeof query.lang === "undefined") {
         res.statusCode = 400;
         res.end(JSON.stringify({error: 400, data: "Bad argument(s)"}));
+        return
     }
 
     res.statusCode = 200;
