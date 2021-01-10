@@ -4863,10 +4863,9 @@ vm-browserify@1.1.2, vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-wandbox-api@^0.0.0:
+"wandbox-api@https://github.com/TWT-Code-Jam-FAST/node-wandbox-api":
   version "0.0.0"
-  resolved "https://registry.yarnpkg.com/wandbox-api/-/wandbox-api-0.0.0.tgz#bda90132082407c0cf8714911d08f6fdbe29261f"
-  integrity sha1-vakBMggkB8DPhxSRHQj2/b4pJh8=
+  resolved "https://github.com/TWT-Code-Jam-FAST/node-wandbox-api#7aff106b23eafcfa3e01034ffd81af4b8cfbf473"
   dependencies:
     debug "^2.2.0"
     minimist "^1.2.0"

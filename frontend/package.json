@@ -16,7 +16,7 @@
     "react-dom": "17.0.1",
     "request": "^2.88.2",
     "type-name": "^2.0.2",
-    "wandbox-api": "^0.0.0"
+    "wandbox-api": "https://github.com/TWT-Code-Jam-FAST/node-wandbox-api"
   },
   "devDependencies": {
     "@types/node": "^14.14.19",

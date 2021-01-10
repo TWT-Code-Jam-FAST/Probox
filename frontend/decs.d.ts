@@ -1,1 +1,1 @@
-declare module "node-wandbox-api"
+declare module "wandbox-api"
