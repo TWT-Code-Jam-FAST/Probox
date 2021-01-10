@@ -46,7 +46,7 @@ export default function Navbar(props) {
             {
               // all menu items
               [
-                ["Time", "/api/time"],
+                ["Time", "/time"],
                 ["Tools", null],
               ].map(([i, f]) => (
                 <MenuItem onClick={f ? () => router.push(f) : handleClose}>
