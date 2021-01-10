@@ -6,6 +6,7 @@ import url from 'url';
 export default function (req, res) {
     const query = url.parse(req.url, true).query
 
+    // noinspection JSUnresolvedVariable
     if (typeof query.code === "undefined" || typeof query.lang === "undefined") {
         res.statusCode = 400;
         res.json({error: 400, data: "Bad argument(s)"})
@@ -14,8 +15,10 @@ export default function (req, res) {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
 
-    const code: string = query.code as string
-    const lang: string = query.lang as string
+    // noinspection JSUnresolvedVariable
+    const code = query.code
+    // noinspection JSUnresolvedVariable
+    const lang = query.lang
 
     runWandbox.fromString(code, {'compiler': lang},
         (error, results) => {
