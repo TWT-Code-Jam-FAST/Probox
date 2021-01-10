@@ -1,4 +1,4 @@
-import runWandbox from './node-wandbox-api';
+const runWandbox = require('./node-wandbox-api/lib/index');
 import url from 'url';
 
 // https://github.com/melpon/wandbox/blob/master/kennel2/API.rst
