@@ -25,7 +25,7 @@ export default function Navbar(props) {
 
   return (
     <div className="navbar root">
-      <AppBar position="fixed">
+      <AppBar position="static">
         <Toolbar>
           <IconButton
             edge="start"
@@ -46,8 +46,9 @@ export default function Navbar(props) {
             {
               // all menu items
               [
+                ["Home", "/"],
                 ["Time", "/time"],
-                ["Tools", null],
+                ["Compiler", "/compiler"],
               ].map(([i, f]) => (
                 <MenuItem onClick={f ? () => router.push(f) : handleClose}>
                   {i}

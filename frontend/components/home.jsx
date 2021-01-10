@@ -3,8 +3,10 @@ import React from "react";
 
 export default function HomePageMain() {
   return (
-    <main className={styles.main}>
-      <h2>Hello, Probox!</h2>
-    </main>
+    <>
+      <main className={styles.main}>
+        <h2>Hello, Probox!</h2>
+      </main>
+    </>
   );
 }
