@@ -4,13 +4,15 @@ import {Box, Button} from "@material-ui/core";
 import styles from "../styles/Compiler.module.css";
 
 import helper from "../helper/helper";
+import CodeInterface from "../components/codeInterface";
 
 function Compiler() {
   const [data, setData] = useState(helper.wbConfig);
 
   const [done, setDone] = useState(0);
 
-  const code = `console.log("hello, &&+/world!")`;
+  const [code, setCode] = useState(``);
+
   const lang = `nodejs-head`;
 
   const fetchData = async () => {
@@ -31,8 +33,9 @@ function Compiler() {
   };
 
   return (
-    <>
-      <main className={styles.main}>
+    <div className={styles.container}>
+      <CodeInterface updateCode={setCode.bind(this)}/>
+      <div className={styles.main}>
         <Box>
           <Button variant="contained" color="primary" onClick={handleClick}>
             Run Code!
@@ -44,8 +47,8 @@ function Compiler() {
           <h2>Standard Error:</h2>
           <h3>{data.program_error}</h3>
         </Box>
-      </main>
-    </>
+      </div>
+    </div>
   );
 }
 

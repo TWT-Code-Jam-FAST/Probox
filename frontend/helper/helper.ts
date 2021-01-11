@@ -21,7 +21,16 @@ function parseQuery(queryString) {
     return query;
 }
 
+const initOptions = {
+    mode: 'javascript',
+    theme: 'material',
+    lineNumbers: true,
+    smartIndent: true,
+    autoCloseBrackets: true,
+}
+
 export default {
     wbConfig: initWandboxConfig,
-    parseQuery: parseQuery
+    parseQuery: parseQuery,
+    initOptions: initOptions
 }
