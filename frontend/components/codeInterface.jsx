@@ -18,7 +18,7 @@ import helper from "../helper/helper";
 export default class CodeInterface extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: `console.log("Hello, world!");`};
+    this.state = {value: helper.exampleJS};
     this.props.updateCode(this.state.value);
   }
 

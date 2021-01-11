@@ -29,8 +29,19 @@ const initOptions = {
     autoCloseBrackets: true,
 }
 
+const exampleJS = `
+// This is an example Node.js code
+
+function greet(name) {
+  console.log(\`Hello, \$\{name\}!\`)
+}
+
+greet("world")
+`.trimStart()
+
 export default {
     wbConfig: initWandboxConfig,
     parseQuery: parseQuery,
-    initOptions: initOptions
+    initOptions: initOptions,
+    exampleJS: exampleJS
 }
