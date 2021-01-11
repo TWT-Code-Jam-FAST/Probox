@@ -3,24 +3,21 @@ import {Box, Button} from "@material-ui/core";
 
 import styles from "../styles/Compiler.module.css";
 
+import helper from "../helper/helper";
+
 function Compiler() {
-  const [data, setData] = useState({
-    status: 0,
-    signal: "",
-    compiler_output: "",
-    compiler_error: "",
-    compiler_message: "",
-    program_output: "",
-    program_error: "",
-    program_message: "",
-    permlink: "",
-    url: ""
-  });
+  const [data, setData] = useState(helper.wbConfig);
 
   const [done, setDone] = useState(0);
 
+  const code = `console.log("hello, &&+/world!")`;
+  const lang = `nodejs-head`;
+
   const fetchData = async () => {
-    const req = await fetch(window.origin + '/api/wandbox?code=console.log("hello, world!")&lang=nodejs-head');
+    const req = await fetch(
+      window.origin +
+      `/api/wandbox?code=${encodeURIComponent(code)}&lang=${encodeURIComponent(lang)}`
+    );
     const newData = await req.json();
 
     setData(newData);
