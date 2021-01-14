@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Typography} from "@material-ui/core";
+//import {Typography} from "@material-ui/core";
 
 
 class NavbarTime extends Component {
@@ -20,9 +20,9 @@ class NavbarTime extends Component {
   render() {
     return (
       <>
-        <Typography edge="end" variant="h6" className={this.props.className}>
+        <a className={this.props.className}>
           {this.state.time}
-        </Typography>
+        </a>
       </>
     );
   }
