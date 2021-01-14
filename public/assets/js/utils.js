@@ -22,7 +22,9 @@ function searchSO(amount = 10, cache = 0) {
       }
 
       const d = data.items;
-      const x = d.map((a) => `<a href="${a.link}">${a.title}</a>`);
+      const x = d.map(
+        (a) => `<a href="${a.link}" target=”_blank">${a.title}</a>`
+      );
       document.getElementById(
         "Card-Title"
       ).innerHTML = `Search Result for ${oVal}`;
