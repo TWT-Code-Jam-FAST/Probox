@@ -23,7 +23,9 @@ class Navbar extends HTMLElement {
     }/regex.html">Regex</a></li>
                     <li class="nav-item"><a class="nav-link ${this.getActive(
                       "1"
-                    )}" href="#">Second Item</a></li>
+                    )}" href="${
+      window.location.origin
+    }/stackoverflow.html">Stack Overflow</a></li>
                     <li class="nav-item"><a class="nav-link ${this.getActive(
                       "2"
                     )}" href="#">Third Item</a></li>
