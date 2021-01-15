@@ -12,6 +12,6 @@ document.addEventListener("click", (e) => {
     !e.target.matches("rect")
   ) {
     colorPickerInput.style.display = "none";
-    // colorPickerInput.value = "";
+    colorPickerInput.value = "";
   }
 });
