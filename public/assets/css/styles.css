@@ -23,15 +23,27 @@ navbar {
 .main-title {
   text-align: left;
   position: absolute;
-  left: 25px;
+  left: 20px;
   margin-top: 10px;
 }
 
 .nav-right {
   float: right;
-  margin: 10px 20px 0 20px;
+  list-style: none;
+  padding: 10px 20px 20px;
+  width: auto;
+  height: auto;
+  margin-top: 0px;
 }
 
 .navbar-right-elements {
-  margin-right: 20px;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.nav-right:hover {
+  background: rgba(255, 148, 77, 0.57);
+  border-radius: 7px;
+  transition: 0.4s;
+  cursor: pointer;
 }
