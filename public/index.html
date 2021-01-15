@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ProBox</title>
   <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/navbar.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js" defer></script>
 </head>
 <body>
   <header>
     <navbar>
       <h2 class="main-title nav-element">ProBox</h2>
       <ul class="navbar-right-elements">
-        <svg id="color-picker" class="nav-element nav-right " width="48" height="50" viewBox="0 0 48 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg id="color-picker" class="nav-element nav-right" width="48" height="50" viewBox="0 0 48 50" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_d)">
           <rect x="4" width="21" height="21" fill="#FFFF80"/>
           <rect x="23" width="21" height="21" fill="#66A3FF"/>
@@ -38,7 +40,9 @@
       
 
     </navbar>
-    <input id="color-editor" placeholder="Enter the background color"> 
+    <input id="color-editor" class="color-input" placeholder="Enter the background color"> 
   </header>
+
+
 </body>
 </html>
