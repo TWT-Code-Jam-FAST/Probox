@@ -15,3 +15,9 @@ document.addEventListener("click", (e) => {
     colorPickerInput.value = "";
   }
 });
+
+document.addEventListener("keyup", function (e) {
+  if (e.code == 13 || e.key == "Enter") {
+    document.body.style.backgroundColor = colorPickerInput.value;
+  }
+});
