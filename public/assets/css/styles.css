@@ -12,16 +12,12 @@ navbar {
   height: 30px;
 }
 
-h2 {
+.nav-element {
   font-size: 30px;
   color: #3f3d56;
   font-weight: normal;
-
   line-height: 40px;
   letter-spacing: 0em;
-}
-
-.nav-element {
 }
 
 .main-title {
@@ -69,11 +65,7 @@ h2 {
 }
 
 @media only screen and (max-width: 720px) {
-  h2 {
+  .nav-element {
     font-size: 22px;
-    color: #3f3d56;
-    font-weight: normal;
-    line-height: 40px;
-    letter-spacing: 0em;
   }
 }
