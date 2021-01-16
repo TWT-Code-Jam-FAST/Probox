@@ -108,6 +108,12 @@ input:focus {
   width: 90px;
 }
 
+#code-board {
+  position: absolute;
+  right: 80px;
+  top: 120px;
+}
+
 @media only screen and (max-width: 720px) {
   .nav-element {
     font-size: 22px;
