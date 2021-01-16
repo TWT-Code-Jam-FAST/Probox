@@ -302,7 +302,7 @@ input:focus {
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 647px) {
   .nav-element {
     font-size: 13px;
   }
