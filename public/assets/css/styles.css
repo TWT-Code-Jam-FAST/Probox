@@ -123,6 +123,12 @@ input:focus {
   bottom: 0;
 }
 
+#page-title-container {
+  position: absolute;
+  top: 300px;
+  left: 300px;
+}
+
 @media only screen and (max-width: 720px) {
   .nav-element {
     font-size: 22px;
