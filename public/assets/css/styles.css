@@ -142,6 +142,15 @@ input:focus {
   color: rgba(63, 61, 86, 0.8);
 }
 
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: orange;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
 #title-text-container h2 {
   white-space: nowrap;
   font-family: Roboto, sans-serif;
@@ -153,7 +162,8 @@ input:focus {
 #title-text-container h2:nth-child(1) {
   width: 5.5em;
   -webkit-animation: type 2s steps(40, end);
-  animation: type 2s steps(40, end);
+  animation: type 2s steps(40, end),
+    blinkTextCursor 500ms steps(44) infinite normal;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -163,7 +173,8 @@ input:focus {
   opacity: 0;
   -webkit-animation: type2 5s steps(30, end),
     blink 0.5s step-end infinite alternate;
-  animation: type2 2s steps(30, end), blink 0.5s step-end infinite alternate;
+  animation: type2 2s steps(30, end), blink 0.5s step-end infinite alternate,
+    blinkTextCursor 500ms steps(44) infinite normal;
   -webkit-animation-delay: 2s;
   animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
