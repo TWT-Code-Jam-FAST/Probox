@@ -125,3 +125,34 @@ input:focus {
     display: none;
   }
 }
+
+@media only screen and (max-width: 560px) {
+  .nav-element {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 1170px) {
+  #code-board {
+    width: 700px;
+    height: 460px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #code-board {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .nav-element {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 395px) {
+  .nav-right {
+    padding: 10px 5px 20px;
+  }
+}
