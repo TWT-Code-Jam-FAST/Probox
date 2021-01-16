@@ -41,6 +41,11 @@ for (let j of skylighterElements) {
     "-ms-animation-name: swing;" +
     "-o-animation-name: swing;" +
     "animation-name: swing;" +
+    "-webkit-animation-delay: 1s;" +
+    "-moz-animation-delay: 1s;" +
+    "-ms-animation-delay: 1s;" +
+    "-o-animation-delay: 1s;" +
+    "animation-delay: 1s;" +
     "-webkit-animation-duration: 1s;" +
     "-moz-animation-duration: 1s;" +
     "-ms-animation-duration: 1s;" +
