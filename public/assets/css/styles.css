@@ -5,7 +5,7 @@
 }
 
 html {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body {
@@ -140,6 +140,90 @@ input:focus {
   font-size: 50px;
 
   color: rgba(63, 61, 86, 0.8);
+}
+
+#title-text-container h2 {
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  overflow: hidden;
+  letter-spacing: 0.1rem;
+  border-right: 0.15em solid orange;
+}
+
+#title-text-container h2:nth-child(1) {
+  width: 5.5em;
+  -webkit-animation: type 2s steps(40, end);
+  animation: type 2s steps(40, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+#title-text-container h2:nth-child(2) {
+  width: 6.4em;
+  opacity: 0;
+  -webkit-animation: type2 5s steps(30, end),
+    blink 0.5s step-end infinite alternate;
+  animation: type2 2s steps(30, end), blink 0.5s step-end infinite alternate;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: 0.15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: 0.15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: 0.15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: 0.15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
 }
 
 #tryOutToolsButton {
