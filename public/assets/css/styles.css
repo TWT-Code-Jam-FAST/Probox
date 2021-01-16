@@ -299,7 +299,7 @@ input:focus {
     position: absolute;
     width: 700px;
     height: 460px;
-    right: 60px;
+    right: 40px;
   }
 }
 @media only screen and (max-width: 900px) {
