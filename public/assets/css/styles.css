@@ -52,6 +52,7 @@ navbar {
 
 #color-picker:hover {
   cursor: pointer;
+  transition: 0.3s;
   box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.25);
 }
 
@@ -78,25 +79,22 @@ input:focus {
   left: 19%;
 }
 
-.skylight-line {
-  position: absolute;
-  border: 1px solid #faa46bb9;
-  transform: rotate(89.92deg);
+.skylight {
 }
 
-#skylight-line1 {
+#skylight1 {
   position: relative;
   left: 0;
   width: 118px;
 }
 
-#skylight-line2 {
+#skylight2 {
   position: relative;
   left: 6px;
   width: 196px;
 }
 
-#skylight-line3 {
+#skylight3 {
   position: relative;
   left: 100px;
   width: 90px;
