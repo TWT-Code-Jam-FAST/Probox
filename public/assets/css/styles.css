@@ -73,27 +73,43 @@ input:focus {
   outline: none;
 }
 
+.skylight-menu {
+  position: absolute;
+  left: 19%;
+}
+
+.skylight-line {
+  position: absolute;
+  border: 1px solid #faa46bb9;
+  transform: rotate(89.92deg);
+}
+
+#skylight-line1 {
+  position: relative;
+  left: 0;
+  width: 118px;
+}
+
+#skylight-line2 {
+  position: relative;
+  left: 6px;
+  width: 196px;
+}
+
+#skylight-line3 {
+  position: relative;
+  left: 100px;
+  width: 90px;
+}
+
 @media only screen and (max-width: 720px) {
   .nav-element {
     font-size: 22px;
   }
 }
 
-.skylight-menu {
-  position: absolute;
-  left: 21%;
-}
-
-.skylight-line {
-  position: absolute;
-  border: 1px solid #ff944d;
-  transform: rotate(89.92deg);
-}
-
-#skylight-line1 {
-  width: 118px;
-}
-
-#skylight-line2 {
-  width: 196px;
+@media only screen and (max-width: 800px) {
+  .skylight-menu {
+    display: none;
+  }
 }
