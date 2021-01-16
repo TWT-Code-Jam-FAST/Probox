@@ -1,10 +1,16 @@
-function openTabs(tabName) {
+function openTabs(e, tabName) {
   let skyLights = document.getElementById("skylights");
   let tab = document.getElementsByClassName("newTab");
+  let tabsToOpen = document.getElementsByClassName("open-tabs");
 
   for (let i of tab) {
     i.style.display = "none";
   }
+
+  for (let j of tabsToOpen) {
+    j.className = j.className.replace(" opened", "");
+  }
+
   if (tabName == "home-tab") {
     skyLights.style.display = "block";
   } else {
@@ -12,4 +18,5 @@ function openTabs(tabName) {
   }
 
   document.getElementById(tabName).style.display = "block";
+  e.currentTarget.className += " opened";
 }

@@ -51,10 +51,17 @@ navbar {
 }
 
 .nav-right-hover:hover {
-  background: rgba(255, 148, 77, 0.57);
+  background: rgba(255, 148, 77, 0.3);
   border-radius: 7px;
   transition: 0.4s;
   cursor: pointer;
+}
+
+.nav-right-hover.opened {
+  border-radius: 7px;
+  transition: 0.4s;
+  cursor: pointer;
+  background: rgba(255, 148, 77, 0.57);
 }
 
 #color-picker:hover {
