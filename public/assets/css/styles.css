@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
+  margin: 0 auto;
 }
 
 body {
@@ -15,6 +16,8 @@ navbar {
 }
 
 .nav-element {
+  position: relative;
+  top: 10px;
   font-size: 30px;
   color: #3f3d56;
   font-weight: normal;
@@ -80,22 +83,27 @@ input:focus {
 }
 
 .skylight {
+  position: absolute;
+  top: 0;
 }
 
 #skylight1 {
   position: relative;
   left: 0;
+  top: 0;
   width: 118px;
 }
 
 #skylight2 {
-  position: relative;
+  position: absolute;
+  top: 0;
   left: 6px;
   width: 196px;
 }
 
 #skylight3 {
-  position: relative;
+  position: absolute;
+  top: 0;
   left: 100px;
   width: 90px;
 }
