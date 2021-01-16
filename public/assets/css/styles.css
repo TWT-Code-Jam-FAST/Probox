@@ -313,6 +313,26 @@ input:focus {
   right: 5px;
 }
 
+#star-container {
+  position: relative;
+  left: 10px;
+  top: 120px;
+}
+
+#star-text {
+  position: relative;
+  bottom: 17px;
+}
+
+.orange-underscore {
+  position: absolute;
+  left: 10px;
+  width: 138px;
+  height: 10px;
+  background: rgba(255, 148, 77, 0.64);
+  border-radius: 2px;
+}
+
 @media only screen and (max-width: 720px) {
   .nav-element {
     font-size: 22px;
