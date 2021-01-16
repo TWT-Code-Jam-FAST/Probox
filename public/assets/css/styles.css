@@ -295,11 +295,12 @@ input:focus {
   position: relative;
   bottom: 7px;
   right: 15px;
-  width: 227px;
+  width: auto;
   height: 41px;
   border-radius: 5px;
   background: #ffffff;
   border: none;
+  padding-left: 10px;
 }
 
 #tools-searcher:focus {
