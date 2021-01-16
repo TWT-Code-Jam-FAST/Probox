@@ -38,8 +38,8 @@
         
         <h2 id="Contact" class="open-tabs nav-element nav-right nav-right-hover" onclick="openTabs(event, 'contact-tab')">Contact</h2>
         <h3 id="Assistant" class="open-tabs nav-element nav-right nav-right-hover" onclick="openTabs(event, 'assistant-tab')">Assistant</h3>
-        <h2 id="Tools" class="open-tabs nav-element nav-right nav-right-hover" onclick="openTabs(event, 'tools-tab')">Tools</h2>
-        <h2 id="Home"class="open-tabs nav-element nav-right nav-right-hover opened" onclick="openTabs(event, 'home-tab')">Home</h2>
+        <h2 id="Tools" class="open-tabs nav-element nav-right nav-right-hover opened" onclick="openTabs(event, 'tools-tab')">Tools</h2>
+        <h2 id="Home"class="open-tabs nav-element nav-right nav-right-hover" onclick="openTabs(event, 'home-tab')">Home</h2>
       </ul>
       
 
@@ -108,19 +108,23 @@
 
   </main>
 
+
+
   <main id="tools-tab" class="newTab">
-    <div id="tools-searcher-container">
-      <input id="tools-searcher" type="text" placeholder="Search For Tools">
-      <svg class="search-bar" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M29.1804 31.9902L32.0088 29.1618L44.0298 41.1824L41.2014 44.0108L29.1804 31.9902Z" fill="#616161"/>
-        <path d="M20 4C15.7565 4 11.6869 5.68571 8.68629 8.68629C5.68571 11.6869 4 15.7565 4 20C4 24.2435 5.68571 28.3131 8.68629 31.3137C11.6869 34.3143 15.7565 36 20 36C24.2435 36 28.3131 34.3143 31.3137 31.3137C34.3143 28.3131 36 24.2435 36 20C36 15.7565 34.3143 11.6869 31.3137 8.68629C28.3131 5.68571 24.2435 4 20 4Z" fill="#616161"/>
-        <path d="M32.4558 35.341L35.2842 32.5125L43.9818 41.2098L41.1534 44.0382L32.4558 35.341Z" fill="#37474F"/>
-        <path d="M20 7C16.5522 7 13.2456 8.36964 10.8076 10.8076C8.36964 13.2456 7 16.5522 7 20C7 23.4478 8.36964 26.7544 10.8076 29.1924C13.2456 31.6304 16.5522 33 20 33C23.4478 33 26.7544 31.6304 29.1924 29.1924C31.6304 26.7544 33 23.4478 33 20C33 16.5522 31.6304 13.2456 29.1924 10.8076C26.7544 8.36964 23.4478 7 20 7Z" fill="#64B5F6"/>
-        <path d="M26.9 14.2C25.2 12.2 22.7 11 20 11C17.3 11 14.8 12.2 13.1 14.2C12.7 14.6 12.8 15.3 13.2 15.6C13.6 16 14.3 15.9 14.6 15.5C16 13.9 17.9 13 20 13C22.1 13 24 13.9 25.4 15.5C25.6 15.7 25.9 15.9 26.2 15.9C26.4 15.9 26.7 15.8 26.8 15.7C27.2 15.3 27.2 14.6 26.9 14.2Z" fill="#BBDEFB"/>
-      </svg>
-        
+    <div id="nav-tools-searcher-container">
+      <div id="tools-searcher-container">
+        <input id="tools-searcher" type="text" placeholder="Search For Tools">
+        <svg class="search-bar" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M29.1804 31.9902L32.0088 29.1618L44.0298 41.1824L41.2014 44.0108L29.1804 31.9902Z" fill="#616161"/>
+          <path d="M20 4C15.7565 4 11.6869 5.68571 8.68629 8.68629C5.68571 11.6869 4 15.7565 4 20C4 24.2435 5.68571 28.3131 8.68629 31.3137C11.6869 34.3143 15.7565 36 20 36C24.2435 36 28.3131 34.3143 31.3137 31.3137C34.3143 28.3131 36 24.2435 36 20C36 15.7565 34.3143 11.6869 31.3137 8.68629C28.3131 5.68571 24.2435 4 20 4Z" fill="#616161"/>
+          <path d="M32.4558 35.341L35.2842 32.5125L43.9818 41.2098L41.1534 44.0382L32.4558 35.341Z" fill="#37474F"/>
+          <path d="M20 7C16.5522 7 13.2456 8.36964 10.8076 10.8076C8.36964 13.2456 7 16.5522 7 20C7 23.4478 8.36964 26.7544 10.8076 29.1924C13.2456 31.6304 16.5522 33 20 33C23.4478 33 26.7544 31.6304 29.1924 29.1924C31.6304 26.7544 33 23.4478 33 20C33 16.5522 31.6304 13.2456 29.1924 10.8076C26.7544 8.36964 23.4478 7 20 7Z" fill="#64B5F6"/>
+          <path d="M26.9 14.2C25.2 12.2 22.7 11 20 11C17.3 11 14.8 12.2 13.1 14.2C12.7 14.6 12.8 15.3 13.2 15.6C13.6 16 14.3 15.9 14.6 15.5C16 13.9 17.9 13 20 13C22.1 13 24 13.9 25.4 15.5C25.6 15.7 25.9 15.9 26.2 15.9C26.4 15.9 26.7 15.8 26.8 15.7C27.2 15.3 27.2 14.6 26.9 14.2Z" fill="#BBDEFB"/>
+        </svg>
+    </div>
     </div>
   </main>
+
 
   <main id="assistant-tab" class="newTab"></main>
   <main id="contact-tab" class="newTab"></main>

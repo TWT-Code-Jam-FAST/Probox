@@ -82,6 +82,7 @@ navbar {
   color: black;
   display: none;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  z-index: 999999;
 }
 
 input:focus {
@@ -270,10 +271,45 @@ input:focus {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-#tools-tab,
+#home-tab,
 #assistant-tab,
 #contact-tab {
   display: none;
+}
+
+#nav-tools-searcher-container {
+  position: relative;
+  top: 100px;
+  background: rgba(255, 148, 77, 0.64);
+  border-radius: 2px;
+  height: 70px;
+  width: 100%;
+}
+
+#tools-searcher-container {
+  position: absolute;
+  right: 0;
+}
+
+#tools-searcher {
+  position: relative;
+  bottom: 7px;
+  right: 15px;
+  width: 227px;
+  height: 41px;
+  border-radius: 5px;
+  background: #ffffff;
+  border: none;
+}
+
+#tools-searcher:focus {
+  outline: none;
+}
+
+.search-bar {
+  position: relative;
+  top: 10px;
+  right: 5px;
 }
 
 @media only screen and (max-width: 720px) {
