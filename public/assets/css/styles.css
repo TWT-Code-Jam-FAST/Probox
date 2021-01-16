@@ -121,7 +121,6 @@ input:focus {
 #orange-wave {
   position: absolute;
   bottom: 0;
-  width: 2000px;
 }
 
 @media only screen and (max-width: 720px) {
