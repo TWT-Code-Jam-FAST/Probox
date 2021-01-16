@@ -143,8 +143,10 @@ input:focus {
 
 @media only screen and (max-width: 1170px) {
   #code-board {
+    position: absolute;
     width: 700px;
     height: 460px;
+    right: 60px;
   }
 }
 
