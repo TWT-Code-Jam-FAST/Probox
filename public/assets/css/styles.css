@@ -115,7 +115,7 @@ input:focus {
 #code-board {
   position: absolute;
   right: 80px;
-  top: 120px;
+  top: 170px;
 }
 
 #orange-wave {
@@ -125,8 +125,47 @@ input:focus {
 
 #page-title-container {
   position: absolute;
-  top: 300px;
-  left: 300px;
+  top: 280px;
+  left: 18%;
+}
+
+#title-text-container {
+  margin-bottom: 80px;
+}
+
+.title-text {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+
+  color: rgba(63, 61, 86, 0.8);
+}
+
+#tryOutToolsButton {
+  background: linear-gradient(
+    270deg,
+    #feae79 0%,
+    rgba(255, 151, 134, 0.979681) 15.44%,
+    #fcb484 100%
+  );
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  width: 220px;
+  height: 80px;
+  border: none;
+  font-size: 25px;
+  line-height: 41px;
+  color: #ffffff;
+}
+
+#tryOutToolsButton:focus {
+  outline: none;
+}
+
+#tryOutToolsButton:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 @media only screen and (max-width: 720px) {
@@ -154,12 +193,7 @@ input:focus {
     height: 460px;
     right: 60px;
   }
-
-  #orange-wave {
-    display: none;
-  }
 }
-
 @media only screen and (max-width: 900px) {
   #code-board {
     display: none;
@@ -175,5 +209,11 @@ input:focus {
 @media only screen and (max-width: 395px) {
   .nav-right {
     padding: 10px 5px 20px;
+  }
+}
+
+@media only screen and (max-height: 829px) {
+  #orange-wave {
+    display: none;
   }
 }
