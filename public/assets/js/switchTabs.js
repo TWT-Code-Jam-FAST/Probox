@@ -2,7 +2,7 @@ let skyLights = document.getElementById("skylights");
 let tab = document.getElementsByClassName("newTab");
 let tabsToOpen = document.getElementsByClassName("open-tabs");
 
-document.getElementById("tools-tab").style.display = "block";
+document.getElementById("home-tab").style.display = "block";
 
 function openTabs(e, tabName) {
   for (let i of tab) {

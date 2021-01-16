@@ -271,7 +271,7 @@ input:focus {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-#home-tab,
+#tools-tab,
 #assistant-tab,
 #contact-tab {
   display: none;
@@ -328,7 +328,7 @@ input:focus {
   position: absolute;
   left: 10px;
   width: 138px;
-  height: 10px;
+  height: 5px;
   background: rgba(255, 148, 77, 0.64);
   border-radius: 2px;
 }
