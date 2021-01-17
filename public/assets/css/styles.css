@@ -400,7 +400,9 @@ input:focus {
 }
 
 #dictionary-tool {
-  margin-right: 50px;
+  position: relative;
+  left: 0px;
+  margin-right: 25px;
 }
 
 #calculator-title {
