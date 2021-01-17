@@ -418,7 +418,7 @@ input:focus {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   .skylight-menu {
     display: none;
   }
@@ -438,7 +438,7 @@ input:focus {
     right: 40px;
   }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 974px) {
   #code-board {
     display: none;
   }
@@ -450,9 +450,9 @@ input:focus {
   }
 }
 
-@media only screen and (max-width: 395px) {
+@media only screen and (max-width: 500px) {
   .nav-right {
-    padding: 10px 5px 20px;
+    padding: 10px 5px 10px;
   }
 }
 
