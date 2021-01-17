@@ -394,6 +394,11 @@ input:focus {
   color: grey;
 }
 
+#dictionary-title {
+  position: relative;
+  left: 8px;
+}
+
 @media only screen and (max-width: 720px) {
   .nav-element {
     font-size: 22px;
