@@ -356,11 +356,21 @@ input:focus {
   top: 100px;
 }
 
-#stackoverflow-icon {
+#stackoverflow-tool {
   z-index: 99999;
   position: relative;
-  top: 240px;
-  left: 18px;
+  top: 235px;
+  left: 20px;
+}
+
+#stackoverflow-icon {
+  position: relative;
+  left: 10px;
+  bottom: 2px;
+}
+
+.tools-title {
+  color: grey;
 }
 
 @media only screen and (max-width: 720px) {
