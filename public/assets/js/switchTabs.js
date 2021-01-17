@@ -1,6 +1,7 @@
 let skyLights = document.getElementById("skylights");
 let tab = document.getElementsByClassName("newTab");
 let tabsToOpen = document.getElementsByClassName("open-tabs");
+let toolsTab = document.getElementById("Tools");
 
 document.getElementById("home-tab").style.display = "block";
 
@@ -20,5 +21,9 @@ function openTabs(e, tabName) {
   }
 
   document.getElementById(tabName).style.display = "block";
-  e.currentTarget.className += " opened";
+  if (e.target.id == "tryOutToolsButton") {
+    toolsTab.classList.add("opened");
+  } else {
+    e.currentTarget.className += " opened";
+  }
 }
