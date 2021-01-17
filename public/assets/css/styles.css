@@ -7,6 +7,10 @@
 html {
   overflow-x: hidden;
 }
+ul,
+li {
+  list-style-type: none;
+}
 
 body {
   margin: 0;
