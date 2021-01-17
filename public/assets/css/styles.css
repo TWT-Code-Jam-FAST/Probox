@@ -373,6 +373,17 @@ input:focus {
   bottom: 2px;
 }
 
+.tools-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.general-tool {
+  display: inline;
+  float: left;
+  margin: 5px 25px 5px 25px;
+}
+
 .tools-title {
   color: grey;
 }
