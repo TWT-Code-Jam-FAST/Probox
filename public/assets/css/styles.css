@@ -139,6 +139,8 @@ input:focus {
 
 #title-text-container {
   margin-bottom: 80px;
+  position: relative;
+  right: 50px;
 }
 
 .title-text {
@@ -347,6 +349,18 @@ input:focus {
 #general-tools-underscore {
   position: absolute;
   left: 1px;
+}
+
+#general-tools-container {
+  position: relative;
+  top: 100px;
+}
+
+#stackoverflow-icon {
+  z-index: 99999;
+  position: relative;
+  top: 240px;
+  left: 18px;
 }
 
 @media only screen and (max-width: 720px) {
