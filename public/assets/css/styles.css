@@ -408,6 +408,10 @@ input:focus {
   left: 8px;
 }
 
+#calculator-tool {
+  margin-right: 50px;
+}
+
 @media only screen and (max-width: 720px) {
   .nav-element {
     font-size: 22px;
