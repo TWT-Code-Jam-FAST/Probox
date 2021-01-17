@@ -333,6 +333,22 @@ input:focus {
   border-radius: 2px;
 }
 
+#general-tools-title {
+  position: relative;
+  top: 200px;
+  left: 20px;
+}
+
+#general-tools-text-title {
+  position: relative;
+  bottom: 17px;
+}
+
+#general-tools-underscore {
+  position: absolute;
+  left: 1px;
+}
+
 @media only screen and (max-width: 720px) {
   .nav-element {
     font-size: 22px;
