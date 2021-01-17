@@ -399,6 +399,15 @@ input:focus {
   left: 8px;
 }
 
+#dictionary-tool {
+  margin-right: 50px;
+}
+
+#calculator-title {
+  position: relative;
+  left: 8px;
+}
+
 @media only screen and (max-width: 720px) {
   .nav-element {
     font-size: 22px;
