@@ -19,11 +19,6 @@ function openTabs(e, tabName) {
     j.className = j.className.replace(" opened", "");
   }
 
-  if (tabName == "home-tab") {
-    skyLights.style.display = "block";
-  } else {
-    skyLights.style.display = "none";
-  }
   let currentTab = document.getElementById(tabName);
   const transition_elements = document.querySelectorAll(".transition");
 
