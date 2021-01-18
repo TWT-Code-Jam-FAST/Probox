@@ -100,37 +100,6 @@ input:focus {
   outline: none;
 }
 
-.skylight-menu {
-  position: absolute;
-  left: 19%;
-}
-
-.skylight {
-  position: absolute;
-  top: 0;
-}
-
-#skylight1 {
-  position: relative;
-  left: 0;
-  top: 0;
-  width: 118px;
-}
-
-#skylight2 {
-  position: absolute;
-  top: 0;
-  left: 6px;
-  width: 196px;
-}
-
-#skylight3 {
-  position: absolute;
-  top: 0;
-  left: 100px;
-  width: 90px;
-}
-
 #code-board {
   position: absolute;
   right: 80px;
@@ -502,9 +471,17 @@ h2.text2 {
     height: 460px;
     right: 40px;
   }
+
+  #person-on-wave {
+    position: absolute;
+    right: 150px;
+    top: 86px;
+    z-index: 99999999;
+  }
 }
 @media only screen and (max-width: 974px) {
-  #code-board {
+  #code-board,
+  #person-on-wave {
     display: none;
   }
 }
@@ -522,7 +499,13 @@ h2.text2 {
 }
 
 @media only screen and (max-height: 829px) {
-  #orange-wave {
+  #wave {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1640px) {
+  #hot-balloon {
     display: none;
   }
 }
