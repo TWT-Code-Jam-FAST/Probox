@@ -392,6 +392,8 @@ input:focus {
 .general-tool {
   display: inline;
   float: left;
+  margin: 5px;
+  margin-bottom: 50px;
 }
 
 .tools-title {
