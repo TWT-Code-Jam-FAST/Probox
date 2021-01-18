@@ -405,9 +405,6 @@ input:focus {
   padding: 0;
 }
 
-.calculator {
-}
-
 @media only screen and (max-width: 720px) {
   .nav-element {
     font-size: 22px;
