@@ -164,7 +164,7 @@ input:focus {
 }
 
 .wave.wave3 {
-  animation: waving2 30s linear infinite;
+  animation: waving2 5s linear infinite;
   z-index: 998;
   opacity: 0.2;
   animation-delay: -2s;
@@ -172,7 +172,7 @@ input:focus {
 }
 
 .wave.wave4 {
-  animation: waving2 150s linear infinite;
+  animation: waving2 15s linear infinite;
   z-index: 997;
   opacity: 0.7;
   animation-delay: -5s;
