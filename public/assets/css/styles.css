@@ -444,7 +444,7 @@ h2.text2 {
   position: absolute;
   right: 260px;
   top: 86px;
-  z-index: 99999999;
+  z-index: 9;
 }
 
 @media only screen and (max-width: 720px) {
@@ -477,7 +477,7 @@ h2.text2 {
     position: absolute;
     right: 150px;
     top: 86px;
-    z-index: 99999999;
+    z-index: 9;
   }
 }
 @media only screen and (max-width: 974px) {
