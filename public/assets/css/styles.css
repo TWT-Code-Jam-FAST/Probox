@@ -429,6 +429,12 @@ h2.text2 {
   margin-bottom: 50px;
 }
 
+.tools-icon:hover {
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 .tools-title {
   position: relative;
   top: 80px;
