@@ -370,13 +370,18 @@ input:focus {
   z-index: 99999;
   position: relative;
   top: 235px;
-  left: 20px;
+  padding: 0;
+  margin: 20px 0 20px 0;
+  display: inline;
 }
 
 .tools-icon {
   position: relative;
-  left: 10px;
   bottom: 2px;
+  display: inline;
+  float: left;
+  margin: 0;
+  padding: 0;
 }
 
 .tools-container {
@@ -387,31 +392,20 @@ input:focus {
 .general-tool {
   display: inline;
   float: left;
-  margin: 5px 25px 5px 25px;
 }
 
 .tools-title {
+  position: relative;
+  top: 80px;
+  right: 80px;
+  display: inline;
   color: grey;
+  float: left;
+  margin: 0;
+  padding: 0;
 }
 
-#dictionary-title {
-  position: relative;
-  left: 8px;
-}
-
-#dictionary-tool {
-  position: relative;
-  left: 0px;
-  margin-right: 25px;
-}
-
-#calculator-title {
-  position: relative;
-  left: 8px;
-}
-
-#calculator-tool {
-  margin-right: 50px;
+.calculator {
 }
 
 @media only screen and (max-width: 720px) {
