@@ -2,6 +2,7 @@ body {
   background-color: #fde99b;
   width: 90%;
   height: 90vh;
+  overflow: auto;
 }
 
 * {
@@ -49,6 +50,12 @@ input:focus {
 #main-title-container {
   position: relative;
   left: 190px;
+}
+
+#answers-container {
+  position: absolute;
+  top: 70%;
+  left: 20%;
 }
 
 @media only screen and (max-width: 870px) {

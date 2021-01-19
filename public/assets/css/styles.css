@@ -563,6 +563,12 @@ iframe {
   }
 }
 
+@media only screen and (max-width: 200px) {
+  * {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   .skylight-menu {
     display: none;

@@ -1,6 +1,10 @@
 function searchSO(amount = 10, cache = 0) {
-  let oVal = document.getElementById("stackoverflow-search-bar");
-  oVal = oVal.value;
+  let theTitle = document.getElementById("main-title-container");
+  theTitle.style.display = "none";
+
+  let searchBar = document.getElementById("stackoverflow-search-bar");
+
+  oVal = searchBar.value;
   const val = encodeURIComponent(oVal);
   fetch(
     `https://api.stackexchange.com/2.2/search/advanced?pagesize=${amount}&order=desc&sort=activity&accepted=True&q=${val}&site=stackoverflow`
