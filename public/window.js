@@ -10,10 +10,11 @@ function create(htmlString) {
 
 function closeWindow(element) {
   element.parentNode.remove();
-  unblurBackgroundStyle = document.createTextNode(
-    "main { filter: blur(0px);-webkit-filter:blur(0px);} "
-  );
-  document.getElementsByTagName("style")[0].append(unblurBackgroundStyle);
+  // unblurBackgroundStyle = document.createTextNode(
+  //   "main { filter: blur(0px);-webkit-filter:blur(0px);} "
+  // );
+
+  // document.getElementsByTagName("style")[0].append(unblurBackgroundStyle);
 }
 
 function createStackOverFlow() {
@@ -22,7 +23,8 @@ function createStackOverFlow() {
     `<div class="window-container stackoverflow"><button class="window-closer" onclick="closeWindow(this)">×</button><iframe id="stackoverflow-window" src="Tools/stackoverflow/index.html"></iframe></div>`
   );
   blurBackgroundStyle = document.createTextNode(
-    "main {  filter: blur(8px);-webkit-filter: blur(8px);} iframe {border: 10px solid #fcdc5c; border-radius: 20px;}"
+    // main {  filter: blur(8px);-webkit-filter: blur(8px);}
+    "iframe {border: 10px solid #fcdc5c; border-radius: 20px;}"
   );
   container.appendChild(stackoverflowPage);
   document.getElementsByTagName("style")[0].append(blurBackgroundStyle);

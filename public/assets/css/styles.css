@@ -400,7 +400,7 @@ h2.text2 {
 }
 
 .general-tool {
-  z-index: 99999;
+  z-index: 999;
   position: relative;
   top: 235px;
   padding: 0;
