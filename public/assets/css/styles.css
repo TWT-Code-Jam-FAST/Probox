@@ -464,12 +464,21 @@ iframe {
   border-radius: 10px;
 }
 
-#window-closer {
+.window-closer {
   z-index: 99999;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 45px;
+  top: 43px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  border: none;
+  font-size: 20px;
+}
+
+.window-closer:hover {
+  transition: 0.5s;
+  background-color: #bfbfbf;
 }
 
 @media only screen and (max-width: 720px) {
