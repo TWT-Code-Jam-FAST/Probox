@@ -1,14 +1,17 @@
 body {
   background-color: #fde99b;
+  width: 90%;
+  height: 90vh;
 }
 
 * {
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
   margin: 0 auto;
+  padding: 0;
 }
 
-#main-title-container {
+#main-searching-container {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -20,5 +23,51 @@ body {
   line-height: 1.3;
   font-size: 3rem;
   position: relative;
+  bottom: 130px;
+}
+
+#stackoverflow-logo {
+  position: relative;
   bottom: 200px;
+  right: 85px;
+}
+
+#stackoverflow-search-bar {
+  position: relative;
+  bottom: 100px;
+  width: 700px;
+  height: 70px;
+}
+
+#main-title-container {
+  position: relative;
+  left: 190px;
+}
+
+@media only screen and (max-width: 870px) {
+  #main-title {
+    font-size: 2rem;
+  }
+
+  #main-title-container {
+    position: relative;
+    left: 160px;
+  }
+
+  #stackoverflow-search-bar {
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 625px) {
+  #main-title {
+    font-size: 1.5rem;
+    right: 100px;
+  }
+  #stackoverflow-search-bar {
+    width: 300px;
+  }
+  #stackoverflow-logo {
+    display: none;
+  }
 }
