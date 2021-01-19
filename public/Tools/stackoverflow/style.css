@@ -1,3 +1,9 @@
 body {
-  background-color: #fcdc5c;
+  background-color: #fde99b;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  margin: 0 auto;
 }

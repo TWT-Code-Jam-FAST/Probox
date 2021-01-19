@@ -454,13 +454,22 @@ h2.text2 {
 }
 
 iframe {
-  z-index: 999999999;
+  z-index: 9999;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
   height: 90vh;
+  border-radius: 10px;
+}
+
+#window-closer {
+  z-index: 99999;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media only screen and (max-width: 720px) {
