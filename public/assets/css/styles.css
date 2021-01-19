@@ -453,6 +453,16 @@ h2.text2 {
   z-index: 9;
 }
 
+iframe {
+  z-index: 999999999;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90vh;
+}
+
 @media only screen and (max-width: 720px) {
   .nav-element {
     font-size: 22px;

@@ -7,60 +7,62 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <script src="assets/js/navbar.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.4.0.min.js" defer></script>
-  <script src="assets/js/swing.js" defer></script>
   <script src="assets/js/switchTabs.js" defer></script>
+  <script src="window.js" defer></script>
   <style></style>
 </head>
 <body>
   <header>
     <navbar>
-      <h2 class="main-title nav-element">ProBox</h2>
-      <ul class="navbar-right-elements">
-        <svg id="color-picker" class="nav-element nav-right" width="48" height="50" viewBox="0 0 48 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g filter="url(#filter0_d)">
-          <rect x="4" width="21" height="21" fill="#FFFF80"/>
-          <rect x="23" width="21" height="21" fill="#66A3FF"/>
-          <rect x="4" y="21" width="21" height="21" fill="#00E68A"/>
-          <rect x="23" y="21" width="21" height="21" fill="#FF4D4D"/>
-          </g>
-          <defs>
-          <filter id="filter0_d" x="0" y="0" width="48" height="50" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-          <feOffset dy="4"/>
-          <feGaussianBlur stdDeviation="2"/>
-          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-          </filter>
-          </defs>
+      <main>
+        <h2 class="main-title nav-element">ProBox</h2>
+        <ul class="navbar-right-elements">
+          <svg id="color-picker" class="nav-element nav-right" width="48" height="50" viewBox="0 0 48 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d)">
+            <rect x="4" width="21" height="21" fill="#FFFF80"/>
+            <rect x="23" width="21" height="21" fill="#66A3FF"/>
+            <rect x="4" y="21" width="21" height="21" fill="#00E68A"/>
+            <rect x="23" y="21" width="21" height="21" fill="#FF4D4D"/>
+            </g>
+            <defs>
+            <filter id="filter0_d" x="0" y="0" width="48" height="50" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+            <feOffset dy="4"/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+            </filter>
+            </defs>
+            </svg>
+          
+          <h2 id="Contact" class="open-tabs nav-element nav-right nav-right-hover" onclick="openTabs(event, 'contact-tab')">Contact</h2>
+          <h3 id="Assistant" class="open-tabs nav-element nav-right nav-right-hover" onclick="openTabs(event, 'assistant-tab')">Assistant</h3>
+          <h2 id="Tools" class="open-tabs nav-element nav-right nav-right-hover" onclick="openTabs(event, 'tools-tab')">Tools</h2>
+          <h2 id="Home"class="open-tabs nav-element nav-right nav-right-hover opened" onclick="openTabs(event, 'home-tab')">Home</h2>
+        </ul>
+        
+
+      </navbar>
+      <input id="color-editor" class="color-input" type="text" placeholder="Background Color"> 
+      <!-- <div id="skylights" class="skylight-menu">
+
+        <svg id="skylight1" class="skylight" width="26" height="143" viewBox="0 0 26 143" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9331 111.041C20.6773 111.629 26 118.55 26 127C26 135.837 20.1797 143 13 143C5.8203 143 0 135.837 0 127C0 118.191 5.784 111.045 12.9328 111L12 -1.97869e-05L13 -0.00842285L13.9331 111.041Z" fill="#FF944D"/>
           </svg>
-        
-        <h2 id="Contact" class="open-tabs nav-element nav-right nav-right-hover" onclick="openTabs(event, 'contact-tab')">Contact</h2>
-        <h3 id="Assistant" class="open-tabs nav-element nav-right nav-right-hover" onclick="openTabs(event, 'assistant-tab')">Assistant</h3>
-        <h2 id="Tools" class="open-tabs nav-element nav-right nav-right-hover" onclick="openTabs(event, 'tools-tab')">Tools</h2>
-        <h2 id="Home"class="open-tabs nav-element nav-right nav-right-hover opened" onclick="openTabs(event, 'home-tab')">Home</h2>
-      </ul>
-      
+          
+        <svg id="skylight2" class="skylight" width="26" height="212" viewBox="0 0 26 143" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9331 111.041C20.6773 111.629 26 118.55 26 127C26 135.837 20.1797 143 13 143C5.8203 143 0 135.837 0 127C0 118.191 5.784 111.045 12.9328 111L12 -1.97869e-05L13 -0.00842285L13.9331 111.041Z" fill="#FF944D"/>
+          </svg>
 
-    </navbar>
-    <input id="color-editor" class="color-input" type="text" placeholder="Background Color"> 
-    <!-- <div id="skylights" class="skylight-menu">
+        <svg id="skylight3" class="skylight" width="26" height="106" viewBox="0 0 26 143" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9331 111.041C20.6773 111.629 26 118.55 26 127C26 135.837 20.1797 143 13 143C5.8203 143 0 135.837 0 127C0 118.191 5.784 111.045 12.9328 111L12 -1.97869e-05L13 -0.00842285L13.9331 111.041Z" fill="#FF944D"/>
+          </svg>
 
-      <svg id="skylight1" class="skylight" width="26" height="143" viewBox="0 0 26 143" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9331 111.041C20.6773 111.629 26 118.55 26 127C26 135.837 20.1797 143 13 143C5.8203 143 0 135.837 0 127C0 118.191 5.784 111.045 12.9328 111L12 -1.97869e-05L13 -0.00842285L13.9331 111.041Z" fill="#FF944D"/>
-        </svg>
-        
-      <svg id="skylight2" class="skylight" width="26" height="212" viewBox="0 0 26 143" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9331 111.041C20.6773 111.629 26 118.55 26 127C26 135.837 20.1797 143 13 143C5.8203 143 0 135.837 0 127C0 118.191 5.784 111.045 12.9328 111L12 -1.97869e-05L13 -0.00842285L13.9331 111.041Z" fill="#FF944D"/>
-        </svg>
-
-      <svg id="skylight3" class="skylight" width="26" height="106" viewBox="0 0 26 143" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9331 111.041C20.6773 111.629 26 118.55 26 127C26 135.837 20.1797 143 13 143C5.8203 143 0 135.837 0 127C0 118.191 5.784 111.045 12.9328 111L12 -1.97869e-05L13 -0.00842285L13.9331 111.041Z" fill="#FF944D"/>
-        </svg>
-
-    </div> -->
-  </header>
+      </div> -->
+    </header>
+  </main>
   <main id="home-tab" class="newTab">
     <div class="transition transition-2"></div>
 
@@ -328,7 +330,7 @@
         </li>
 
         <li class="stackoverflow-tool general-tool" id="stackoverflow-tool">
-          <svg id="stackoverflow-icon" class="tools-icon" width="75" height="76" viewBox="0 0 95 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg id="stackoverflow-icon" class="tools-icon" width="75" height="76" viewBox="0 0 95 96" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="createStackOverFlow()">
             <rect width="95" height="96" rx="30" fill="#FCDC5C"/>
             <path d="M24.6875 51.6667H29.25V71.5H24.6875V51.6667Z" fill="#607D8B"/>
             <path d="M24.6875 67.25H64.2292V71.5H24.6875V67.25Z" fill="#607D8B"/>
@@ -339,7 +341,7 @@
             <path d="M42.1788 32.614L59.6674 43.9216L57.0649 47.4141L39.5764 36.1065L42.1788 32.614Z" fill="#D38B28"/>
             <path d="M36.7011 42.0588L56.7345 48.7718L55.1896 52.7722L35.1562 46.0593L36.7011 42.0588Z" fill="#C09553"/>
           </svg>
-          <div id="stackoverflow-title" class="tools-title">stackoverflow<div>          
+          <div id="stackoverflow-title" class="tools-title" >stackoverflow<div>          
         </li>
 
         <li class="video-recorder-tool general-tool" id="video-recorder-tool">
@@ -418,5 +420,8 @@
     <div class="transition transition-3"></div>
   </main>
 
+  <div id="windows-container">
+
+  </div>
 </body>
 </html>
