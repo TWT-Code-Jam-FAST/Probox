@@ -30,7 +30,7 @@ navbar {
 }
 
 .nav-element {
-  font-family: Andale Mono, monospace;
+  font-family: Roboto, sans-serif;
   position: relative;
   top: 10px;
   font-size: 30px;
@@ -38,6 +38,7 @@ navbar {
   font-weight: normal;
   line-height: 40px;
   letter-spacing: 0em;
+  z-index: 9999;
 }
 
 .main-title {
