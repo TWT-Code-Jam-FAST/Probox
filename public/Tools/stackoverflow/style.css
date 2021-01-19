@@ -35,8 +35,15 @@ body {
 #stackoverflow-search-bar {
   position: relative;
   bottom: 100px;
-  width: 700px;
+  width: 690px;
   height: 70px;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+}
+
+input:focus {
+  outline: none;
 }
 
 #main-title-container {
