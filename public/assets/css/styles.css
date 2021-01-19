@@ -482,6 +482,12 @@ iframe {
   background-color: #bfbfbf;
 }
 
+.window-top-left-icon {
+  position: relative;
+  bottom: 40px;
+  right: 5px;
+}
+
 @media only screen and (max-width: 720px) {
   .nav-element {
     font-size: 22px;
