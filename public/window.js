@@ -45,3 +45,15 @@ function createCalculator() {
   container.appendChild(calculatorPage);
   document.getElementsByTagName("style")[0].append(iframeStyle);
 }
+
+function createCodeShortener() {
+  container = document.getElementById("windows-container");
+  let codeShortenerPage = create(
+    `<div class="window-container calculator"><button id="code_shortener-window-closer" class="window-closer" onclick="closeWindow(this)">×</button><iframe id="code_shortener-window" scrolling="yes" src="Tools/shortener/index.html"></iframe></div>`
+  );
+  iframeStyle = document.createTextNode(
+    "iframe {border: none; border-radius: 5px;}"
+  );
+  container.appendChild(codeShortenerPage);
+  document.getElementsByTagName("style")[0].append(iframeStyle);
+}
