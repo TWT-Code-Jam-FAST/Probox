@@ -1,7 +1,4 @@
 function searchSO(amount = 10, cache = 0) {
-  let theTitle = document.getElementById("main-title-container");
-  theTitle.style.display = "none";
-
   let searchBar = document.getElementById("stackoverflow-search-bar");
 
   oVal = searchBar.value;
@@ -33,7 +30,7 @@ function searchSO(amount = 10, cache = 0) {
       );
       document.getElementById(
         "search-results"
-      ).innerHTML = `Search Result for ${oVal}`;
+      ).innerHTML = `Search Result for ${oVal}:`;
       document.getElementById("answers-container").innerHTML = x.join("<br>");
     })
   );
