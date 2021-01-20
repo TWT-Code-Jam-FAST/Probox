@@ -36,11 +36,11 @@ function createStackOverFlow() {
 function createCalculator() {
   container = document.getElementById("windows-container");
   let calculatorPage = create(
-    `<div class="window-container calculator"><button class="window-closer" onclick="closeWindow(this)">×</button><iframe id="calculator-window" scrolling="yes" src="Tools/calculator/index.html"></iframe></div>`
+    `<div class="window-container calculator"><button id="calculator-window-closer" class="window-closer" onclick="closeWindow(this)">×</button><iframe id="calculator-window" scrolling="yes" src="Tools/calculator/index.html"></iframe></div>`
   );
   iframeStyle = document.createTextNode(
     // main {  filter: blur(8px);-webkit-filter: blur(8px);}
-    "iframe {border: 10px solid #8D6C9F; border-radius: 20px;}"
+    "iframe {border: 10px solid #6b507c; border-radius: 20px;}"
   );
   container.appendChild(calculatorPage);
   document.getElementsByTagName("style")[0].append(iframeStyle);
