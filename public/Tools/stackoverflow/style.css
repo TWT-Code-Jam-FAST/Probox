@@ -12,7 +12,7 @@ body {
 }
 
 #main-searching-container {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -51,6 +51,26 @@ input:focus {
   left: 190px;
 }
 
+#answers-container {
+  position: absolute;
+  top: 70%;
+  left: 30%;
+}
+
+#Load-More {
+  position: fixed;
+  bottom: 5px;
+  margin-top: 10px;
+  right: 500px;
+}
+
+#search-results {
+  position: absolute;
+  top: 60%;
+  left: 34.5%;
+  transform: translate(-50%, -50%);
+}
+
 @media only screen and (max-width: 870px) {
   #main-title {
     font-size: 2rem;
@@ -63,6 +83,10 @@ input:focus {
 
   #stackoverflow-search-bar {
     width: 500px;
+  }
+
+  #answers-container {
+    left: 20%;
   }
 }
 

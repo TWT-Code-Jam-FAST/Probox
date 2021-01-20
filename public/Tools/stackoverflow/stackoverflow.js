@@ -1,6 +1,7 @@
 function searchSO(amount = 10, cache = 0) {
-  let oVal = document.getElementById("stackoverflow-search-bar");
-  oVal = oVal.value;
+  let searchBar = document.getElementById("stackoverflow-search-bar");
+
+  oVal = searchBar.value;
   const val = encodeURIComponent(oVal);
   fetch(
     `https://api.stackexchange.com/2.2/search/advanced?pagesize=${amount}&order=desc&sort=activity&accepted=True&q=${val}&site=stackoverflow`
@@ -29,7 +30,7 @@ function searchSO(amount = 10, cache = 0) {
       );
       document.getElementById(
         "search-results"
-      ).innerHTML = `Search Result for ${oVal}`;
+      ).innerHTML = `Search Result for ${oVal}:`;
       document.getElementById("answers-container").innerHTML = x.join("<br>");
     })
   );
