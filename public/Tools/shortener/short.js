@@ -20,7 +20,7 @@ let cm = new CodeMirror.fromTextArea(document.getElementById("shortener-ip"), {
 cm.setValue(
   `
 function greet(name) {
-  console.log(\`Hello, \` + name + "!");
+  console.log("Hello, " + name + "!");
 }
 greet("wo" + 'r' + "ld")
 `.trim() + "\n"
@@ -33,7 +33,7 @@ let cmdp = new CodeMirror.fromTextArea(document.getElementById("shortened"), {
   lineWrapping: true,
   scrollbarStyle: "overlay",
   autoCloseBrackets: true,
-  readOnly: "nocursor",
+  readOnly: true,
 });
 
 document.addEventListener("keyup", function (e) {
