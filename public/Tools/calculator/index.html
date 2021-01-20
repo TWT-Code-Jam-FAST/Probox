@@ -8,6 +8,27 @@
     <script src="calculator.js"></script>
 </head>
 <body>
-    
+    <div id = "calc-container">
+        <div id = "input-container"><p id="input-number"></p><p id="operation-symbol"></p></div>
+        <div class="button1 button" onclick="cClear()"><p  id="clear-button"> C </p></div>
+        <div class="button1 button" onclick="negate()"><p> +/– </p></div>
+        <div class = "button1 button" onclick="percent()"><p> % </p></div>
+        <div class = "button2 button" onclick="div()"><p> ÷ </p></div>
+        <div class="button3 button" style="grid-row: 3" onclick="digit('7')"><p> 7 </p></div>
+        <div class="button3 button" style="grid-row: 3" onclick="digit('8')"><p> 8 </p></div>
+        <div class="button3 button" style="grid-row: 3" onclick="digit('9')"><p> 9 </p></div>
+        <div class="button2 button" style="grid-row: 3" onclick="multiply()"><p> × </p></div>
+        <div class="button3 button" style="grid-row: 4" onclick="digit('4')"><p> 4 </p></div>
+        <div class="button3 button" style="grid-row: 4" onclick="digit('5')"><p> 5 </p></div>
+        <div class="button3 button" style="grid-row: 4" onclick="digit('6')"><p> 6 </p></div>
+        <div class="button2 button" style="grid-row: 4" onclick="sub()"><p> – </p></div>
+        <div class="button3 button" style="grid-row: 5" onclick="digit('1')"><p> 1 </p></div>
+        <div class="button3 button" style="grid-row: 5" onclick="digit('2')"><p> 2 </p></div>
+        <div class="button3 button" style="grid-row: 5" onclick="digit('3')"><p> 3 </p></div>
+        <div class="button2 button" style="grid-row: 5" onclick="add()"><p> + </p></div>
+        <div class="zero-button button2 button" style="grid-row: 6; grid-column: 5 / span 2" onclick="calculate()"><p> = </p></div>
+        <div class="button3 button" style="grid-row: 6" onclick="decimal()"><p> . </p></div>
+        <div class="button3 button" style="grid-row: 6" onclick="digit('0')"><p> 0 </p></div>
+    </div>
 </body>
 </html>
