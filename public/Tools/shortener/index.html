@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Probox - Code Shortener</title>
-    <link rel="stylesheet" href="style.css">
 
     <link
       rel="stylesheet"
@@ -28,9 +27,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./uglify.min.js"></script>
     <script src="./short.js" defer></script>
+
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <textarea id="shortener-ip"></textarea>
-    <textarea id="shortened"></textarea>
+    <div style="float: left; width: 53%; max-width: 53%; min-width: 53%">
+      <textarea id="shortener-ip"></textarea>
+    </div>
+    <div style="width: 100%; max-width: 100%; min-width: 100%">
+      <textarea id="shortened"></textarea>
+    </div>
   </body>
 </html>
