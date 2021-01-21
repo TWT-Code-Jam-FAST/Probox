@@ -18,6 +18,11 @@ document.addEventListener("click", (e) => {
 
 document.addEventListener("keyup", function (e) {
   if (e.code == 13 || e.key == "Enter") {
-    document.body.style.backgroundColor = colorPickerInput.value;
+    localStorage.setItem("backgroundColor", colorPickerInput.value);
+    document.body.style.backgroundColor = localStorage.getItem(
+      "backgroundColor"
+    );
   }
 });
+
+document.body.style.backgroundColor = localStorage.getItem("backgroundColor");

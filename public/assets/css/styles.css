@@ -500,6 +500,7 @@ h2.text2 {
 }
 
 .tools-icon:hover {
+  transition: 0.3s;
   background-color: transparent;
   padding: 10px;
   border-radius: 10px;
@@ -534,6 +535,10 @@ iframe {
   border-radius: 10px;
 }
 
+#calculator-window {
+  width: 1000px;
+}
+
 .window-closer {
   z-index: 99999;
   position: absolute;
@@ -555,6 +560,12 @@ iframe {
   position: relative;
   bottom: 40px;
   right: 5px;
+}
+
+#calculator-window-closer {
+  position: absolute;
+  top: 35px;
+  left: 400px;
 }
 
 @media only screen and (max-width: 720px) {

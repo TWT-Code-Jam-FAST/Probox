@@ -26,6 +26,8 @@ greet("wo" + 'r' + "ld")
 `.trim() + "\n"
 );
 
+cm.setSize("auto", window.innerHeight);
+
 let cmdp = new CodeMirror.fromTextArea(document.getElementById("shortened"), {
   lineNumbers: true,
   mode: "javascript",
@@ -35,6 +37,8 @@ let cmdp = new CodeMirror.fromTextArea(document.getElementById("shortened"), {
   autoCloseBrackets: true,
   readOnly: true,
 });
+
+cmdp.setSize("auto", window.innerHeight);
 
 document.addEventListener("keyup", function (e) {
   shorten();
