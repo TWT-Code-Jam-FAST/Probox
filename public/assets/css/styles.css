@@ -500,6 +500,7 @@ h2.text2 {
 }
 
 .tools-icon:hover {
+  transition: 0.3s;
   background-color: transparent;
   padding: 10px;
   border-radius: 10px;
