@@ -55,10 +55,9 @@ input:focus {
   width: 50%;
   height: 480px;
   background: white;
-  position: absolute;
-  top: 72%;
-  left: 51%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  top: 420px;
+  left: 21px;
   border-radius: 15px;
   border: none;
 }
