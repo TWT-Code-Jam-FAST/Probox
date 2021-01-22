@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/addon/scroll/simplescrollbars.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/codemirror.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/theme/dracula.min.css"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/mode/meta.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/addon/scroll/simplescrollbars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/addon/edit/closebrackets.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="../../assets/bootstrap/css/bootstrap.min.css"
+    />
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <div style="float: left; width: 50%; height: 100%">
+        <textarea id="compiler-ip"></textarea>
+      </div>
+      <div style="float: left; width: 40%; margin: 3%">
+        <div class="container" style="margin-bottom: 5%; text-align: center">
+          <button
+            class="btn btn-success"
+            type="button"
+            style="width: 30%"
+            onclick="submit()"
+          >
+            Run
+          </button>
+        </div>
+        <strong>Standard Output</strong>
+        <div
+          id="msg-con"
+          class="container"
+          style="
+            border-style: dashed;
+            border-color: var(--success);
+            margin-top: 10px;
+            margin-bottom: 20px;
+            overflow: scroll;
+          "
+        >
+          <code id="msg"></code>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("msg-con").style.minHeight = `${
+        window.innerHeight * 0.2
+      }px`;
+      document.getElementById("msg-con").style.maxHeight = `${
+        window.innerHeight * 0.6
+      }px`;
+    </script>
+  </body>
+</html>
