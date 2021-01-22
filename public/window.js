@@ -57,3 +57,15 @@ function createCodeShortener() {
   container.appendChild(codeShortenerPage);
   document.getElementsByTagName("style")[0].append(iframeStyle);
 }
+
+function createDictionary() {
+  container = document.getElementById("windows-container");
+  let dictionaryPage = create(
+    `<div class="window-container calculator"><button id="dictionary-window-closer" class="window-closer" onclick="closeWindow(this)">×</button><iframe id="dictionary-window" scrolling="yes" src="Tools/dictionary/index.html"></iframe></div>`
+  );
+  iframeStyle = document.createTextNode(
+    "iframe {border: none; border-radius: 20px;}"
+  );
+  container.appendChild(dictionaryPage);
+  document.getElementsByTagName("style")[0].append(iframeStyle);
+}
