@@ -69,3 +69,15 @@ function createDictionary() {
   container.appendChild(dictionaryPage);
   document.getElementsByTagName("style")[0].append(iframeStyle);
 }
+
+function createCompiler() {
+  container = document.getElementById("windows-container");
+  let compilerPage = create(
+    `<div class="window-container calculator"><button id="compiler-window-closer" class="window-closer" onclick="closeWindow(this)">×</button><iframe id="compiler-window" scrolling="yes" src="Tools/compiler/index.html"></iframe></div>`
+  );
+  iframeStyle = document.createTextNode(
+    "iframe {border: none; border-radius: 20px; box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);}"
+  );
+  container.appendChild(compilerPage);
+  document.getElementsByTagName("style")[0].append(iframeStyle);
+}
