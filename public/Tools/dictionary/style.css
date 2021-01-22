@@ -23,7 +23,7 @@ input:focus {
 
 #vocab-search-bar {
   position: absolute;
-  top: 35%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
@@ -35,7 +35,7 @@ input:focus {
 
 #main-title {
   position: absolute;
-  top: 150px;
+  top: 50px;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 50px;
@@ -56,7 +56,7 @@ input:focus {
   height: 480px;
   background: white;
   position: relative;
-  top: 420px;
+  top: 300px;
   left: 21px;
   border-radius: 15px;
   border: none;
