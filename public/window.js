@@ -49,7 +49,7 @@ function createCalculator() {
 function createCodeShortener() {
   container = document.getElementById("windows-container");
   let codeShortenerPage = create(
-    `<div class="window-container calculator"><button id="code_shortener-window-closer" class="window-closer" onclick="closeWindow(this)">×</button><iframe id="code_shortener-window" scrolling="yes" src="Tools/shortener/index.html"></iframe></div>`
+    `<div class="window-container codeshortener"><button id="code_shortener-window-closer" class="window-closer" onclick="closeWindow(this)">×</button><iframe id="code_shortener-window" scrolling="yes" src="Tools/shortener/index.html"></iframe></div>`
   );
   iframeStyle = document.createTextNode(
     "iframe {border: none; border-radius: 5px;}"
@@ -61,7 +61,7 @@ function createCodeShortener() {
 function createDictionary() {
   container = document.getElementById("windows-container");
   let dictionaryPage = create(
-    `<div class="window-container calculator"><button id="dictionary-window-closer" class="window-closer" onclick="closeWindow(this)">×</button><iframe id="dictionary-window" scrolling="yes" src="Tools/dictionary/index.html"></iframe></div>`
+    `<div class="window-container dictionary"><button id="dictionary-window-closer" class="window-closer" onclick="closeWindow(this)">×</button><iframe id="dictionary-window" scrolling="yes" src="Tools/dictionary/index.html"></iframe></div>`
   );
   iframeStyle = document.createTextNode(
     "iframe {border: none; border-radius: 20px;}"
@@ -73,11 +73,23 @@ function createDictionary() {
 function createCompiler() {
   container = document.getElementById("windows-container");
   let compilerPage = create(
-    `<div class="window-container calculator"><button id="compiler-window-closer" class="window-closer" onclick="closeWindow(this)">×</button><iframe id="compiler-window" scrolling="yes" src="Tools/compiler/index.html"></iframe></div>`
+    `<div class="window-container compiler"><button id="compiler-window-closer" class="window-closer" onclick="closeWindow(this)">×</button><iframe id="compiler-window" scrolling="yes" src="Tools/compiler/index.html"></iframe></div>`
   );
   iframeStyle = document.createTextNode(
     "iframe {border: none; border-radius: 20px; box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);}"
   );
   container.appendChild(compilerPage);
+  document.getElementsByTagName("style")[0].append(iframeStyle);
+}
+
+function createWhiteBoard() {
+  container = document.getElementById("windows-container");
+  let WhiteBoardPage = create(
+    `<div class="window-container calculator"><button id="whiteboard-window-closer" class="window-closer" onclick="closeWindow(this)">×</button><iframe id="whiteboard-window" scrolling="yes" src="Tools/whiteboard/index.html"></iframe></div>`
+  );
+  iframeStyle = document.createTextNode(
+    "iframe {border: none; border-radius: 20px; box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);}"
+  );
+  container.appendChild(WhiteBoardPage);
   document.getElementsByTagName("style")[0].append(iframeStyle);
 }
