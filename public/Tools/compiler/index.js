@@ -67,6 +67,12 @@ $(document).ready(function () {
     cm.setOption("mode", "ruby");
     lang = "ruby-head";
   });
+  $("#select-lua").click(function (e) {
+    e.preventDefault();
+    cm.setValue(LUACODE);
+    cm.setOption("mode", "lua");
+    lang = "lua-5.4.0";
+  });
 
   $("select").on("change", selectTheme);
 });

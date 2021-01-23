@@ -44,3 +44,14 @@ end
 
 greet('world')
 `.trim() + "\n";
+
+const LUACODE =
+  `
+-- This is the Lua template
+
+function greet(name)
+    print("Hello, " .. name .. "!")
+end
+
+greet("world")
+`.trim() + "\n";

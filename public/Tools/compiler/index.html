@@ -38,6 +38,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/mode/javascript/javascript.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/clike/clike.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/python/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/lua/lua.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/ruby/ruby.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/mode/meta.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/addon/scroll/simplescrollbars.min.js"></script>
@@ -102,6 +103,16 @@
                 >Ruby</a
               >
             </li>
+            <li class="nav-item" role="presentation">
+              <a
+                id="select-lua"
+                class="nav-link"
+                role="tab"
+                data-toggle="tab"
+                href="#tab-5"
+                >Lua</a
+              >
+            </li>
           </ul>
           <div class="tab-content" style="margin-top: 3%">
             <div class="tab-pane active" role="tabpanel" id="tab-1">
@@ -110,15 +121,19 @@
             </div>
             <div class="tab-pane" role="tabpanel" id="tab-2">
               <p>Language: Python</p>
-              <p>Compiler: CPython</p>
+              <p>Compiler: CPython 3</p>
             </div>
             <div class="tab-pane" role="tabpanel" id="tab-3">
               <p>Language: C++</p>
-              <p>Compiler: gcc</p>
+              <p>Compiler: GCC</p>
             </div>
             <div class="tab-pane" role="tabpanel" id="tab-4">
               <p>Language: Ruby</p>
-              <p>Compiler: CRuby</p>
+              <p>Compiler: CRuby 2</p>
+            </div>
+            <div class="tab-pane" role="tabpanel" id="tab-5">
+              <p>Language: C#</p>
+              <p>Compiler: Lua 5</p>
             </div>
           </div>
         </div>
@@ -150,27 +165,27 @@
         >
           <code id="msg"></code>
         </div>
+        <select style="margin-left: 3%" id="select">
+          <optgroup label="Dark Themes">
+            <option selected>Dracula</option>
+            <option>Material-palenight</option>
+            <option>Material</option>
+            <option>Monokai</option>
+          </optgroup>
+          <optgroup label="Light Themes">
+            <option>Solarized light</option>
+            <option>Base16-light</option>
+            <option>Default</option>
+          </optgroup>
+        </select>
       </div>
-      <select style="margin-left: 3%" id="select">
-        <optgroup label="Dark Themes">
-          <option selected>Dracula</option>
-          <option>Material-palenight</option>
-          <option>Material</option>
-          <option>Monokai</option>
-        </optgroup>
-        <optgroup label="Light Themes">
-          <option>Solarized light</option>
-          <option>Base16-light</option>
-          <option>Default</option>
-        </optgroup>
-      </select>
     </div>
     <script>
       document.getElementById("msg-con").style.minHeight = `${
         window.innerHeight * 0.2
       }px`;
       document.getElementById("msg-con").style.maxHeight = `${
-        window.innerHeight * 0.6
+        window.innerHeight * 0.4
       }px`;
     </script>
   </body>
