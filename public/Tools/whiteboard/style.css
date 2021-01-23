@@ -7,3 +7,9 @@
 body,html {
     background-color: white;
 }
+
+canvas { 
+    border: 2px solid black;
+    border-radius: 20px;
+    transform: translate(7px, 5px);
+}
