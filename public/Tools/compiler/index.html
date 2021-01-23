@@ -13,14 +13,38 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/theme/dracula.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/theme/material-palenight.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/theme/solarized.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/theme/monokai.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/theme/material.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/theme/base16-light.min.css"
+    />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/clike/clike.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/python/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/ruby/ruby.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/mode/meta.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/addon/scroll/simplescrollbars.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/addon/edit/closebrackets.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./temp.js" defer></script>
     <script src="./index.js" defer></script>
     <link rel="stylesheet" href="style.css" />
     <link
@@ -35,8 +59,74 @@
         <textarea id="compiler-ip"></textarea>
       </div>
       <div style="float: left; width: 40%; margin: 3%">
-        <div class="container" style="margin-bottom: 5%; text-align: center">
+        <div>
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a
+                id="select-js"
+                class="nav-link active"
+                role="tab"
+                data-toggle="tab"
+                href="#tab-1"
+                >Node.js</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                id="select-py"
+                class="nav-link"
+                role="tab"
+                data-toggle="tab"
+                href="#tab-2"
+                >Python</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                id="select-cpp"
+                class="nav-link"
+                role="tab"
+                data-toggle="tab"
+                href="#tab-3"
+                >C++</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                id="select-rb"
+                class="nav-link"
+                role="tab"
+                data-toggle="tab"
+                href="#tab-4"
+                >Ruby</a
+              >
+            </li>
+          </ul>
+          <div class="tab-content" style="margin-top: 3%">
+            <div class="tab-pane active" role="tabpanel" id="tab-1">
+              <p>Language: Node JS</p>
+              <p>Compiler: Node</p>
+            </div>
+            <div class="tab-pane" role="tabpanel" id="tab-2">
+              <p>Language: Python</p>
+              <p>Compiler: CPython</p>
+            </div>
+            <div class="tab-pane" role="tabpanel" id="tab-3">
+              <p>Language: C++</p>
+              <p>Compiler: gcc</p>
+            </div>
+            <div class="tab-pane" role="tabpanel" id="tab-4">
+              <p>Language: Ruby</p>
+              <p>Compiler: CRuby</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="container"
+          style="margin-bottom: 5%; margin-top: 5%; text-align: center"
+        >
           <button
+            id="runbtn"
             class="btn btn-success"
             type="button"
             style="width: 30%"
@@ -60,6 +150,19 @@
           <code id="msg"></code>
         </div>
       </div>
+      <select style="margin-left: 3%" id="select">
+        <optgroup label="Dark Themes">
+          <option selected>Dracula</option>
+          <option>Material-palenight</option>
+          <option>Material</option>
+          <option>Monokai</option>
+        </optgroup>
+        <optgroup label="Light Themes">
+          <option>Solarized light</option>
+          <option>Base16-light</option>
+          <option>Default</option>
+        </optgroup>
+      </select>
     </div>
     <script>
       document.getElementById("msg-con").style.minHeight = `${
