@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Probox - Regex</title>
+    <link
+      rel="stylesheet"
+      href="../../assets/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.min.css" />
+    <link rel="stylesheet" href="../../assets/css/Highlight-Clean.css" />
+    <link rel="stylesheet" href="../../assets/css/Navigation-Clean.css" />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
+
+  <body>
+    <my-navbar current="0"></my-navbar>
+
+    <div class="container" style="padding: 30px">
+      <h1 style="text-align: center; padding: 10px">Regex Templates</h1>
+      <div class="card-group">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Password</h4>
+            <p class="card-text">Password Validation</p>
+            <code id="r-pwd"
+              >(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s)(?=.*[!@#$*])</code
+            >
+            <br />
+            <br />
+            <button
+              class="btn btn-success"
+              type="button"
+              onclick="copyId(`r-pwd`)"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Email</h4>
+            <p class="card-text">The regular expression for email</p>
+            <code id="r-email">^[^@ ]+@[^@ ]+\.[^@ \.]{2,}$</code>
+            <br />
+            <br />
+            <button
+              class="btn btn-success"
+              type="button"
+              onclick="copyId(`r-email`)"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Date</h4>
+            <p class="card-text">Date Validation (YYYY-MM-DD)</p>
+            <code id="r-date">\d{4}-\d{2}-\d{2}</code>
+            <br />
+            <br />
+            <button
+              class="btn btn-success"
+              type="button"
+              onclick="copyId(`r-date`)"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
