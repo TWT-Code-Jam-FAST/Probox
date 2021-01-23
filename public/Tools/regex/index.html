@@ -73,6 +73,94 @@
             </button>
           </div>
         </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Mastercard</h4>
+            <p class="card-text">Mastercard Validation</p>
+            <code id="r-mcard"
+              >^(?:5[1–5][0–9]{2}|222[1–9]|22[3–9][0–9]|2[3–6][0–9]{2}|27[01][0–9]|2720)[0–9]{12}$</code
+            >
+            <br />
+            <br />
+            <button
+              class="btn btn-success"
+              type="button"
+              onclick="copyId(`r-mcard`)"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card-group">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Visa Card</h4>
+            <p class="card-text">Visa Credit Card Validation</p>
+            <code id="r-vcard">^4[0–9]{12}(?:[0–9]{3})?$</code>
+            <br />
+            <br />
+            <button
+              class="btn btn-success"
+              type="button"
+              onclick="copyId(`r-vcard`)"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">IPv4</h4>
+            <p class="card-text">IPv4 Address Validator</p>
+            <code id="r-ip"
+              >^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$</code
+            >
+            <br />
+            <br />
+            <button
+              class="btn btn-success"
+              type="button"
+              onclick="copyId(`r-ip`)"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">JSON</h4>
+            <p class="card-text">JSON Validator & Parser</p>
+            <code id="r-json"
+              >(?(DEFINE)(?&#x3C;json&#x3E;(?&#x3E;\s*(?&#x26;object)\s*|\s*(?&#x26;array)\s*))(?&#x3C;object&#x3E;(?&#x3E;\{\s*(?&#x3E;(?&#x26;pair)(?&#x3E;\s*,\s*(?&#x26;pair))*)?\s*\}))(?&#x3C;pair&#x3E;(?&#x3E;(?&#x26;STRING)\s*:\s*(?&#x26;value)))(?&#x3C;array&#x3E;(?&#x3E;\[\s*(?&#x3E;(?&#x26;value)(?&#x3E;\s*,\s*(?&#x26;value))*)?\s*\]))(?&#x3C;value&#x3E;(?&#x3E;true|false|null|(?&#x26;STRING)|(?&#x26;NUMBER)|(?&#x26;object)|(?&#x26;array)))(?&#x3C;STRING&#x3E;(?&#x3E;&#x22;(?&#x3E;\\(?&#x3E;[&#x22;\\\/bfnrt]|u[a-fA-F0-9]{4})|[^&#x22;\\\0-\x1F\x7F]+)*&#x22;))(?&#x3C;NUMBER&#x3E;(?&#x3E;-?(?&#x3E;0|[1-9][0-9]*)(?&#x3E;\.[0-9]+)?(?&#x3E;[eE][+-]?[0-9]+)?)))\A(?&#x26;json)\z</code
+            >
+            <br />
+            <br />
+            <button
+              class="btn btn-success"
+              type="button"
+              onclick="copyId(`r-json`)"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">CSV</h4>
+            <p class="card-text">CSV Validation</p>
+            <code id="r-csv">(?:\s*(?:\"([^\"]*)\"|([^,]+))\s*,?)+? </code>
+            <br />
+            <br />
+            <button
+              class="btn btn-success"
+              type="button"
+              onclick="copyId(`r-csv`)"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
       </div>
     </div>
     <script src="../../assets/js/jquery.min.js"></script>
