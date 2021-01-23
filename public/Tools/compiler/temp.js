@@ -14,6 +14,7 @@ const PYCODE =
 
 def greet(name):
     print(f"Hello, {name}!")
+
 greet("world")
 `.trim() + "\n";
 
@@ -40,5 +41,6 @@ const RBCODE =
 def greet(name)
     puts "Hello, #{name}!"
 end
+
 greet('world')
 `.trim() + "\n";
