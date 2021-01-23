@@ -42,15 +42,6 @@ input:focus {
   color: white;
 }
 
-#result {
-  position: absolute;
-  font-size: 25px;
-  top: 48%;
-  left: 28%;
-  transform: translate(-50%, -50%);
-  color: black;
-}
-
 #result-container {
   width: 50%;
   height: 480px;
@@ -60,4 +51,17 @@ input:focus {
   left: 21px;
   border-radius: 15px;
   border: none;
+}
+
+#word {
+  position: relative;
+  top: 5px;
+  margin: 10px;
+  font-size: 35px;
+}
+
+#definition-container {
+  position: relative;
+  left: 10px;
+  word-wrap: break-word;
 }
