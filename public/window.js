@@ -85,11 +85,24 @@ function createCompiler() {
 function createWhiteBoard() {
   container = document.getElementById("windows-container");
   let WhiteBoardPage = create(
-    `<div class="window-container calculator"><button id="whiteboard-window-closer" class="window-closer" onclick="closeWindow(this)">×</button><iframe id="whiteboard-window" scrolling="yes" src="Tools/whiteboard/index.html"></iframe></div>`
+    `<div class="window-container whiteboard"><button id="whiteboard-window-closer" class="window-closer" onclick="closeWindow(this)">×</button><iframe id="whiteboard-window" scrolling="yes" src="Tools/whiteboard/index.html"></iframe></div>`
   );
   iframeStyle = document.createTextNode(
     "iframe {border: none; border-radius: 20px; box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);}"
   );
   container.appendChild(WhiteBoardPage);
+  document.getElementsByTagName("style")[0].append(iframeStyle);
+}
+
+
+function createRegexTemplate() {
+  container = document.getElementById("windows-container");
+  let regexTemplatePage = create(
+    `<div class="window-container regexTemplate"><button id="regex-template-window-closer" class="window-closer" onclick="closeWindow(this)">×</button><iframe id="regex-template-window" scrolling="yes" src="Tools/regex/index.html"></iframe></div>`
+  );
+  iframeStyle = document.createTextNode(
+    "iframe {border: none; border-radius: 20px; box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);}"
+  );
+  container.appendChild(regexTemplatePage);
   document.getElementsByTagName("style")[0].append(iframeStyle);
 }
