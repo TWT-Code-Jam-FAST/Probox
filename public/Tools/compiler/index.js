@@ -19,7 +19,7 @@ const fetchData = async (code, lang) => {
   );
   const newData = await req.json();
 
-  const msg = newData.program_message || "";
+  const msg = newData.program_message || newData.compiler_message || "";
 
   document.getElementById("msg").innerHTML = msg.replaceAll("\n", "<br>");
   document.getElementById("runbtn").innerHTML = "Run";
