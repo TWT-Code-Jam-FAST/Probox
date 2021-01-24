@@ -106,3 +106,16 @@ function createRegexTemplate() {
   container.appendChild(regexTemplatePage);
   document.getElementsByTagName("style")[0].append(iframeStyle);
 }
+
+
+function createToDoList() {
+  container = document.getElementById("windows-container");
+  let toDoListPage = create(
+    `<div class="window-container toDoList"><button id="todolist-window-closer" class="window-closer" onclick="closeWindow(this)">×</button><iframe id="todolist-window" scrolling="yes" src="Tools/todolist/index.html"></iframe></div>`
+  );
+  iframeStyle = document.createTextNode(
+    "iframe {border: none; border-radius: 20px; box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);}"
+  );
+  container.appendChild(toDoListPage);
+  document.getElementsByTagName("style")[0].append(iframeStyle);
+}
