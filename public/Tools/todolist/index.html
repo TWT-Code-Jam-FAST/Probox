@@ -6,6 +6,7 @@
     <title>ProBox - todolist</title>
     <link rel="stylesheet" href="style.css">
     <script src="todo.js" defer></script>
+    <script src="rightClickMenu.js" defer></script>
 </head>
 <body>
     <main class="tags-box-container">
@@ -14,8 +15,17 @@
         <button id="create-task-btn">Create New Task</button>
         <input type="text" id="task-input" placeholder="Enter Your Task">
         <button id="add-task-btn">Add Task</button>
-        <ul id="todo-task-box">
-        </ul>
+        <div id="tasks-container">
+            <ul id="todo-task-box">
+            </ul>
+        </div>
+
+        <div class="right-click-container" onmouseenter="showMenu()" onmouseleave="menuOffRemove()">
+            <ul class="right-click-menu off menu">
+                <li class="menu-item" id="delete-task">Delete</li>
+                <li class="menu-item" id="cancel">Cancel</li>
+            </ul>
+        </div>
 
     </main>
 </body>
