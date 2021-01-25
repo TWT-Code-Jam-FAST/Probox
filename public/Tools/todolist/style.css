@@ -2,9 +2,20 @@
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
+    font-family: Roboto, sans-serif;
 }
 
 body, html {
     background-color: white;
 }
 
+#task-input,#add-task-btn {
+    display: none;
+}
+
+.tags-box-container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
