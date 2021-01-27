@@ -565,7 +565,7 @@ iframe {
 #calculator-window-closer {
   position: absolute;
   top: 35px;
-  left: 400px;
+  left: 20%;
 }
 
 @media only screen and (max-width: 720px) {
