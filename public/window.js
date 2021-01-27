@@ -119,3 +119,17 @@ function createToDoList() {
   container.appendChild(toDoListPage);
   document.getElementsByTagName("style")[0].append(iframeStyle);
 }
+
+
+
+function createAsciiChart() {
+  container = document.getElementById("windows-container");
+  let asciiChartPage = create(
+    `<div class="window-container asciiChart"><button id="ascii-chart-window-closer" class="window-closer" onclick="closeWindow(this)">×</button><iframe id="ascii-chart-window" scrolling="yes" src="Tools/ascii/index.html"></iframe></div>`
+  );
+  iframeStyle = document.createTextNode(
+    "iframe {border: none; border-radius: 20px; box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);}"
+  );
+  container.appendChild(asciiChartPage);
+  document.getElementsByTagName("style")[0].append(iframeStyle);
+}
