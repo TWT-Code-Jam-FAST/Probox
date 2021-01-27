@@ -1,4 +1,8 @@
 replace =
+  26: "SUB"
+  27: "ESC"
+  28: "FS"
+  29: "GS"
   30: "RS"
   31: "US"
   32: "SPACE"
@@ -8,11 +12,11 @@ replace =
 gen = -> 
   document.getElementById("tb-bd").innerHTML = ""
   s = ""
-  for i in [30..127]
+  for i in [26..127]
     w = ""
 
     # Dec
-    w += "<td>" + i + "</td>"
+    w += "<td>#{i}</td>"
 
     # Hex
     w += "<td>" + i.toString(16).padStart(2, 0) + "</td>"
@@ -21,7 +25,7 @@ gen = ->
     w += "<td>" + i.toString(2).padStart(8, 0) + "</td>"
     
     # HTML
-    w += "<td>" + "" + "</td>"
+    w += "<td>&amp;##{i};</td>"
     
     # Char
     w += "<td>" + 

@@ -1,6 +1,10 @@
 var gen, replace;
 
 replace = {
+  26: "SUB",
+  27: "ESC",
+  28: "FS",
+  29: "GS",
   30: "RS",
   31: "US",
   32: "SPACE",
@@ -11,17 +15,17 @@ gen = function () {
   var i, j, s, w;
   document.getElementById("tb-bd").innerHTML = "";
   s = "";
-  for (i = j = 30; j <= 127; i = ++j) {
+  for (i = j = 26; j <= 127; i = ++j) {
     w = "";
     // Dec
-    w += "<td>" + i + "</td>";
+    w += `<td>${i}</td>`;
     // Hex
     w += "<td>" + i.toString(16).padStart(2, 0) + "</td>";
     // Bin
     w += "<td>" + i.toString(2).padStart(8, 0) + "</td>";
 
     // HTML
-    w += "<td>" + "" + "</td>";
+    w += `<td>&amp;#${i};</td>`;
 
     // Char
     w +=
