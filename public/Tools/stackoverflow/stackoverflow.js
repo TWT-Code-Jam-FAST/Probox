@@ -19,7 +19,7 @@ function searchSO(amount = 10, cache = 0) {
       } else {
         document.getElementById(
           "Load-More"
-        ).innerHTML = `<button type="button" onClick="searchSO(${
+        ).innerHTML = `<button class="load-more-button" type="button" onClick="searchSO(${
           amount + 10
         }, ${data.items.length})">Load More</button>`;
       }
@@ -30,8 +30,8 @@ function searchSO(amount = 10, cache = 0) {
       );
       document.getElementById(
         "search-results"
-      ).innerHTML = `Search Result for ${oVal}:`;
-      document.getElementById("answers-container").innerHTML = x.join("<br>");
+      ).innerHTML = `Searching Results for ${oVal}:`;
+      document.getElementById("answers-container").innerHTML = x.join("<br><br>");
     })
   );
 }

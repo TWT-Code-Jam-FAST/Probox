@@ -40,6 +40,7 @@ body {
   padding: 10px;
   border-radius: 15px;
   border: none;
+  font-size: 1em; 
 }
 
 input:focus {
@@ -53,7 +54,7 @@ input:focus {
 
 #answers-container {
   position: absolute;
-  top: 70%;
+  top: 68%;
   left: 30%;
 }
 
@@ -61,15 +62,40 @@ input:focus {
   position: fixed;
   bottom: 5px;
   margin-top: 10px;
-  right: 500px;
+  left: 12%;
+
+}
+
+.load-more-button {
+  background: rgba(210, 206, 206, 0.9);
+  border: 5px solid #D2CECE;
+  box-sizing: border-box;
+  border-radius: 15px;
+  width: 93px;
+  height: 38px;
 }
 
 #search-results {
   position: absolute;
   top: 60%;
-  left: 34.5%;
+  left: 37.5%;
   transform: translate(-50%, -50%);
+  font-family: Roboto,sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 35px;
+    
+
 }
+
+
+a {
+  color: #0075FF;
+  margin: 20px;
+  word-wrap: break-word;
+}
+
 
 @media only screen and (max-width: 870px) {
   #main-title {
