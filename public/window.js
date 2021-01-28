@@ -133,3 +133,16 @@ function createAsciiChart() {
   container.appendChild(asciiChartPage);
   document.getElementsByTagName("style")[0].append(iframeStyle);
 }
+
+
+function createVideoRecorder() {
+  container = document.getElementById("windows-container");
+  let videoRecorderPage = create(
+    `<div class="window-container videoRecorder"><button id="video-recorder-window-closer" class="window-closer" onclick="closeWindow(this)">×</button><iframe id="video-recorder-window" scrolling="yes" src="Tools/videoRecorder/index.html"></iframe></div>`
+  );
+  iframeStyle = document.createTextNode(
+    "iframe {border: none; border-radius: 20px; box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);}"
+  );
+  container.appendChild(videoRecorderPage);
+  document.getElementsByTagName("style")[0].append(iframeStyle);
+}

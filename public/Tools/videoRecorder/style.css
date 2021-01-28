@@ -1,0 +1,11 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    font-weight: normal; 
+}
+
+body {
+    background-color: white;
+}
