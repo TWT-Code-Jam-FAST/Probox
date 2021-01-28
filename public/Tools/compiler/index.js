@@ -21,7 +21,9 @@ const fetchData = async (code, lang) => {
 
   const msg = newData.program_message || newData.compiler_message || "";
 
-  document.getElementById("msg").innerHTML = msg.replaceAll("\n", "<br>");
+  document.getElementById("msg").innerHTML = msg
+    .replaceAll("\n", "<br>")
+    .replaceAll(" ", "&nbsp");
   document.getElementById("runbtn").innerHTML = "Run";
   document.getElementById("runbtn").classList = "btn btn-success";
 };
