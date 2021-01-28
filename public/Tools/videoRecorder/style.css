@@ -9,3 +9,10 @@
 body {
     background-color: white;
 }
+
+#record-btn {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transition: translate(-50%,-50%);
+}
