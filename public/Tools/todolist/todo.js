@@ -1,36 +1,39 @@
-var taskBox = document.getElementById("todo-task-box");
-var addTaskButton = document.getElementById("add-task-btn");
-var taskInput = document.getElementById("task-input");
-var createNewButton = document.getElementById("create-task-btn");
-var taskContainer = document.getElementById("tasks-container");
-var taskCount = 0;
+(function ($) {
+  "use strict";
+  $(function () {
+    var todoListItem = $(".todo-list");
+    var todoListInput = $(".todo-list-input");
+    $(".todo-list-add-btn").on("click", function (event) {
+      event.preventDefault();
 
-function validateTask (string){
-    return string.replace(/\s/g, '').length && string.length
-}
+      var item = $(this).prevAll(".todo-list-input").val();
 
+      if (item) {
+        todoListItem.append(
+          `<li>
+    <div class='form-check'><label class='form-check-label'>
+    <input class='checkbox' type='checkbox' />` +
+            item +
+            `<i class='input-helper'></i>
+    </label></div><i class='remove mdi mdi-close-circle-outline'></i>
+</li>`
+        );
+        todoListInput.val("");
+      }
+    });
 
+    todoListItem.on("change", ".checkbox", function () {
+      if ($(this).attr("checked")) {
+        $(this).removeAttr("checked");
+      } else {
+        $(this).attr("checked", "checked");
+      }
 
-createNewButton.addEventListener("click", ()=> {
-    addTaskButton.style.display = "block";
-    taskInput.style.display = "block";
+      $(this).closest("li").toggleClass("completed");
+    });
 
-    addTaskButton.addEventListener("click", () => {
-        if(validateTask(taskInput.value)) {
-            let newTask = document.createElement("li");
-            newTask.innerHTML = taskInput.value;
-            newTask.classList.add("task");
-            taskContainer.style.display = "block";
-            taskCount++;
-            newTask.id = "task"+taskCount; 
-            taskBox.appendChild(newTask);
-            taskInput.value = "";
-            taskInput.style.display = "none";
-            addTaskButton.style.display = "none";
-        } else {
-            taskInput.style.borderColor = "red";
-        }
-
-       });
-});
-
+    todoListItem.on("click", ".remove", function () {
+      $(this).parent().remove();
+    });
+  });
+})(jQuery);

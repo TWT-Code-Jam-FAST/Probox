@@ -1,32 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProBox - todolist</title>
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProBox - TODO List</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="../../assets/bootstrap/css/bootstrap.min.css"
+    />
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"
+    />
+
     <script src="todo.js" defer></script>
-    <script src="rightClickMenu.js" defer></script>
-</head>
-<body>
-    <main class="tags-box-container">
-
-        <h3 id="title">Enter Your Name</h3>
-        <button id="create-task-btn">Create New Task</button>
-        <input type="text" id="task-input" placeholder="Enter Your Task">
-        <button id="add-task-btn">Add Task</button>
-        <div id="tasks-container">
-            <ul id="todo-task-box">
-            </ul>
+  </head>
+  <body>
+    <div class="page-content page-container" id="page-content">
+      <div class="padding">
+        <div class="row container d-flex justify-content-center">
+          <div class="col-md-12">
+            <div class="card px-3">
+              <div class="card-body">
+                <h4 style="padding: 10px">My Todo List</h4>
+                <div class="add-items d-flex">
+                  <input
+                    type="text"
+                    class="form-control todo-list-input"
+                    placeholder="What do you need to do today?"
+                  />
+                  <button
+                    class="add btn btn-primary font-weight-bold todo-list-add-btn"
+                  >
+                    Add
+                  </button>
+                </div>
+                <div class="list-wrapper">
+                  <ul class="d-flex flex-column-reverse todo-list">
+                    <li class="completed">
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="checkbox" type="checkbox" checked="" />
+                          Watch some Tech With Tim videos
+                          <i class="input-helper"></i
+                        ></label>
+                      </div>
+                      <i class="remove mdi mdi-close-circle-outline"></i>
+                    </li>
+                    <li>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="checkbox" type="checkbox" /> Learn
+                          React.js <i class="input-helper"></i
+                        ></label>
+                      </div>
+                      <i class="remove mdi mdi-close-circle-outline"></i>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="right-click-container" onmouseenter="showMenu()" onmouseleave="menuOffRemove()">
-            <ul class="right-click-menu off menu">
-                <li class="menu-item" id="delete-task">Delete</li>
-                <li class="menu-item" id="cancel">Cancel</li>
-            </ul>
-        </div>
-
-    </main>
-</body>
+      </div>
+    </div>
+  </body>
 </html>
