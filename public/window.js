@@ -94,7 +94,6 @@ function createWhiteBoard() {
   document.getElementsByTagName("style")[0].append(iframeStyle);
 }
 
-
 function createRegexTemplate() {
   container = document.getElementById("windows-container");
   let regexTemplatePage = create(
@@ -106,7 +105,6 @@ function createRegexTemplate() {
   container.appendChild(regexTemplatePage);
   document.getElementsByTagName("style")[0].append(iframeStyle);
 }
-
 
 function createToDoList() {
   container = document.getElementById("windows-container");
@@ -120,8 +118,6 @@ function createToDoList() {
   document.getElementsByTagName("style")[0].append(iframeStyle);
 }
 
-
-
 function createAsciiChart() {
   container = document.getElementById("windows-container");
   let asciiChartPage = create(
@@ -133,7 +129,6 @@ function createAsciiChart() {
   container.appendChild(asciiChartPage);
   document.getElementsByTagName("style")[0].append(iframeStyle);
 }
-
 
 function createVideoRecorder() {
   container = document.getElementById("windows-container");

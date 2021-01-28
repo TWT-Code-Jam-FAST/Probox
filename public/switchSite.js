@@ -21,6 +21,21 @@ switch (page.toLowerCase().trim()) {
   case "compiler":
     createCompiler();
     break;
+  case "whileboard":
+    createWhiteBoard();
+    break;
+  case "regex":
+    createRegexTemplate();
+    break;
+  case "todo":
+    createToDoList();
+    break;
+  case "ascii":
+    createAsciiChart();
+    break;
+  case "video":
+    createVideoRecorder();
+    break;
   default:
     break;
 }
