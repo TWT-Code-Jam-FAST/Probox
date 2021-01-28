@@ -476,6 +476,7 @@ h2.text2 {
   padding: 0;
   margin: 20px 0 20px 0;
   display: inline;
+  width: 200px;
 }
 
 .tools-icon {
@@ -651,25 +652,24 @@ iframe {
 
 @media only screen and (max-width: 1570px) {
   #calculator-window-closer {
-  position: absolute;
-  left: 15%;
-  top: 43px;
+    position: absolute;
+    left: 15%;
+    top: 43px;
   }
 }
 
 @media only screen and (max-width: 1355px) {
-  
   #calculator-window-closer {
-  position: absolute;
-  left: 10%;
-  top: 43px;
-} }
-
+    position: absolute;
+    left: 10%;
+    top: 43px;
+  }
+}
 
 @media only screen and (max-width: 1204px) {
-  
   #calculator-window-closer {
-  position: absolute;
-  left: 5%;
-  top: 43px;
-} }
+    position: absolute;
+    left: 5%;
+    top: 43px;
+  }
+}
