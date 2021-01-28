@@ -15,4 +15,15 @@ body {
     top: 50%;
     right: 10%;
     transition: translate(-50%,-50%);
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255,0,0,0.7);
+    border-radius: 50%;
+    border: 10px solid rgb(168, 167, 167);
+}
+
+video {
+    position: relative;
+    top: 50px;
+    left: 50px;
 }
