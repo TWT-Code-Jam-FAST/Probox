@@ -4,14 +4,18 @@
   margin: 0 auto;
 }
 
+
 html {
   overflow-x: hidden;
   overflow-y: scroll;
 }
+
+
 ul,
 li {
   list-style-type: none;
 }
+
 
 body {
   margin: 0;
@@ -19,15 +23,18 @@ body {
   height: 80vh;
 }
 
+
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
 }
 
+
 navbar {
   width: 100%;
   height: 30px;
 }
+
 
 .nav-element {
   font-family: Roboto, sans-serif;
@@ -41,12 +48,14 @@ navbar {
   z-index: 9999;
 }
 
+
 .main-title {
   text-align: left;
   position: absolute;
   left: 20px;
   margin-top: 10px;
 }
+
 
 .nav-right {
   float: right;
@@ -57,10 +66,12 @@ navbar {
   margin-top: 0px;
 }
 
+
 .navbar-right-elements {
   margin-right: 10px;
   margin-left: 20px;
 }
+
 
 .nav-right-hover:hover {
   background: rgba(255, 148, 77, 0.3);
@@ -69,6 +80,7 @@ navbar {
   cursor: pointer;
 }
 
+
 .nav-right-hover.opened {
   border-radius: 7px;
   transition: 0.4s;
@@ -76,11 +88,13 @@ navbar {
   background: rgba(255, 148, 77, 0.70);
 }
 
+
 #color-picker:hover {
   cursor: pointer;
   transition: 0.3s;
   box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.25);
 }
+
 
 #color-editor {
   position: fixed;
@@ -97,9 +111,11 @@ navbar {
   z-index: 999999;
 }
 
+
 input:focus {
   outline: none;
 }
+
 
 #code-board {
   position: absolute;
@@ -108,12 +124,14 @@ input:focus {
   filter: drop-shadow(0px 4px 115px rgba(0, 0, 0, 0.25));
 }
 
+
 #hot-balloon {
   position: absolute;
   top: -80px;
   left: 250px;
   filter: drop-shadow(0px 4px 250px rgba(0, 0, 0, 0.25));
 }
+
 
 .wave {
   position: absolute;
@@ -124,6 +142,7 @@ input:focus {
   background: url(../img/wave.png);
   background-size: 1000px 100px;
 }
+
 
 .wave.wave1 {
   animation: waving 30s linear infinite;
@@ -137,6 +156,7 @@ input:focus {
   bottom: 0;
 }
 
+
 .wave.wave2 {
   animation: waving2 15s linear infinite;
   z-index: 999;
@@ -148,6 +168,7 @@ input:focus {
   animation-delay: -5s;
   bottom: 10px;
 }
+
 
 .wave.wave3 {
   animation: waving2 5s linear infinite;
@@ -161,6 +182,7 @@ input:focus {
   bottom: 15px;
 }
 
+
 .wave.wave4 {
   animation: waving2 15s linear infinite;
   z-index: 997;
@@ -172,6 +194,8 @@ input:focus {
   animation-delay: -5s;
   bottom: 20px;
 }
+
+
 @-webkit-keyframes waving {
   0% {
     background-position-x: 0;
@@ -180,6 +204,7 @@ input:focus {
     background-position-x: 1000px;
   }
 }
+
 
 @-o-keyframes waving {
   0% {
@@ -190,6 +215,7 @@ input:focus {
   }
 }
 
+
 @-moz-keyframes waving {
   0% {
     background-position-x: 0;
@@ -198,6 +224,7 @@ input:focus {
     background-position-x: 1000px;
   }
 }
+
 
 @keyframes waving {
   0% {
@@ -208,6 +235,7 @@ input:focus {
   }
 }
 
+
 @keyframes waving2 {
   0% {
     background-position-x: 0;
@@ -216,6 +244,7 @@ input:focus {
     background-position-x: -1000px;
   }
 }
+
 
 @-webkit-keyframes waving2 {
   0% {
@@ -226,6 +255,7 @@ input:focus {
   }
 }
 
+
 @-o-keyframes waving2 {
   0% {
     background-position-x: 0;
@@ -234,6 +264,7 @@ input:focus {
     background-position-x: -1000px;
   }
 }
+
 
 @-moz-keyframes waving2 {
   0% {
@@ -244,17 +275,20 @@ input:focus {
   }
 }
 
+
 #page-title-container {
   position: absolute;
   top: 280px;
   left: 17%;
 }
 
+
 #title-text-container {
   margin-bottom: 80px;
   position: relative;
   right: 50px;
 }
+
 
 .title-text {
   font-family: Roboto, sans-serif;
@@ -265,6 +299,7 @@ input:focus {
   color: rgba(63, 61, 86, 0.8);
 }
 
+
 @keyframes blinkTextCursor {
   from {
     border-right-color: orange;
@@ -274,6 +309,7 @@ input:focus {
   }
 }
 
+
 #title-text-container h2 {
   white-space: nowrap;
   font-family: Roboto, sans-serif;
@@ -281,6 +317,7 @@ input:focus {
   letter-spacing: 0.1rem;
   border-right: 0.15em solid orange;
 }
+
 
 h2.text1 {
   width: 5.5em;
@@ -290,6 +327,7 @@ h2.text1 {
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
+
 
 h2.text2 {
   width: 6.4em;
@@ -304,6 +342,7 @@ h2.text2 {
   animation-fill-mode: forwards;
 }
 
+
 @keyframes type {
   0% {
     width: 0;
@@ -316,6 +355,7 @@ h2.text2 {
   }
 }
 
+
 @-webkit-keyframes type {
   0% {
     width: 0;
@@ -327,6 +367,7 @@ h2.text2 {
     border: none;
   }
 }
+
 
 @keyframes type2 {
   0% {
@@ -344,6 +385,7 @@ h2.text2 {
   }
 }
 
+
 @-webkit-keyframes type2 {
   0% {
     width: 0;
@@ -359,6 +401,7 @@ h2.text2 {
     border: none;
   }
 }
+
 
 #tryOutToolsButton {
   background: linear-gradient(
@@ -377,20 +420,24 @@ h2.text2 {
   color: #ffffff;
 }
 
+
 #tryOutToolsButton:focus {
   outline: none;
 }
+
 
 #tryOutToolsButton:hover {
   cursor: pointer;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+
 #tools-tab,
 #assistant-tab,
 #contact-tab {
   display: none;
 }
+
 
 #nav-tools-searcher-container {
   position: relative;
@@ -401,10 +448,12 @@ h2.text2 {
   width: 100%;
 }
 
+
 #tools-searcher-container {
   position: absolute;
   right: 0;
 }
+
 
 #tools-searcher {
   position: relative;
@@ -419,9 +468,11 @@ h2.text2 {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
 }
 
+
 #tools-searcher:focus {
   outline: none;
 }
+
 
 .search-bar {
   position: relative;
@@ -429,16 +480,6 @@ h2.text2 {
   right: 5px;
 }
 
-#star-container {
-  position: relative;
-  left: 10px;
-  top: 120px;
-}
-
-#star-text {
-  position: relative;
-  bottom: 17px;
-}
 
 .orange-underscore {
   position: absolute;
@@ -449,26 +490,31 @@ h2.text2 {
   border-radius: 2px;
 }
 
+
 #general-tools-title {
   position: relative;
   top: 200px;
   left: 20px;
 }
 
+
 #general-tools-text-title {
   position: relative;
   bottom: 17px;
 }
+
 
 #general-tools-underscore {
   position: absolute;
   left: 1px;
 }
 
+
 #general-tools-container {
   position: relative;
   top: 100px;
 }
+
 
 .general-tool {
   z-index: 999;
@@ -480,6 +526,7 @@ h2.text2 {
   width: 200px;
 }
 
+
 .tools-icon {
   position: relative;
   bottom: 2px;
@@ -489,10 +536,12 @@ h2.text2 {
   padding: 0;
 }
 
+
 .tools-container {
   display: flex;
   flex-wrap: wrap;
 }
+
 
 .general-tool {
   display: inline;
@@ -501,12 +550,14 @@ h2.text2 {
   margin-bottom: 50px;
 }
 
+
 .tools-icon:hover {
   transition: 0.3s;
   background-color: transparent;
   padding: 10px;
   border-radius: 10px;
 }
+
 
 .tools-title {
   position: relative;
@@ -519,12 +570,14 @@ h2.text2 {
   padding: 0;
 }
 
+
 #person-on-wave {
   position: absolute;
   right: 260px;
   top: 86px;
   z-index: 9;
 }
+
 
 iframe {
   z-index: 9999;
@@ -537,9 +590,11 @@ iframe {
   border-radius: 10px;
 }
 
+
 #calculator-window {
   width: 1000px;
 }
+
 
 .window-closer {
   z-index: 99999;
@@ -553,10 +608,12 @@ iframe {
   font-size: 20px;
 }
 
+
 .window-closer:hover {
   transition: 0.5s;
   background-color: #bfbfbf;
 }
+
 
 .window-top-left-icon {
   position: relative;
@@ -564,11 +621,15 @@ iframe {
   right: 5px;
 }
 
+
 #calculator-window-closer {
   position: fixed;
   left: 20%;
   top: 43px;
 }
+
+
+
 
 @media only screen and (max-width: 720px) {
   .nav-element {
