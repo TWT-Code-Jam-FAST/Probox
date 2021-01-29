@@ -442,7 +442,7 @@ h2.text2 {
 #nav-tools-searcher-container {
   position: relative;
   top: 100px;
-  background: rgb(255, 179, 128);
+  background: linear-gradient(to right top, #ff9966, #ffbb99);
   border-radius: 2px;
   height: 70px;
   width: 100%;
@@ -547,7 +547,7 @@ h2.text2 {
   display: inline;
   float: left;
   margin: 5px;
-  margin-bottom: 50px;
+  margin: 25px; 
 }
 
 
@@ -627,7 +627,6 @@ iframe {
   left: 20%;
   top: 43px;
 }
-
 
 
 
