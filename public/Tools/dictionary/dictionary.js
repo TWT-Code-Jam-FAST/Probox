@@ -8,7 +8,7 @@ document.addEventListener("keyup", function (e) {
     input = input.trim();
     if (input) {
       fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${input}`)
-        .then((res) => res.json())
+        .then((res) => (res.ok ? res.json() : res.json()))
         .then((data) => {
           if (!data.title) {
             word.innerHTML = data[0].word;
@@ -26,11 +26,15 @@ document.addEventListener("keyup", function (e) {
                 ].innerHTML += `<p>${data[0].meanings[i].definitions[j].definition}</p>`;
               }
             }
+          } else if (data.message) {
+            word.innerHTML = "";
+            definitions.innerHTML = data.message;
+            definitions.innerHTML = "";
           }
         });
     } else {
-      word.innerHTML = "--";
-      definition.innerHTML = "--";
+      word.innerHTML = "";
+      definition.innerHTML = "";
       definitions.innerHTML = "";
     }
   }

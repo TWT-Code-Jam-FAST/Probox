@@ -1,3 +1,5 @@
+/*
+
 * {
   margin: 0 auto;
   padding: 0;
@@ -7,8 +9,10 @@
 
 body,
 html {
-  background-color: #788b9c;
+  background-color: #ffca93;
 }
+
+*/
 
 input {
   font-size: 25px;
@@ -21,47 +25,17 @@ input:focus {
   margin: 20px;
 }
 
-#vocab-search-bar {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  height: 100px;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-}
-
-#main-title {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 50px;
-  color: white;
-}
-
 #result-container {
-  width: 50%;
-  height: 480px;
   background: white;
-  position: relative;
-  top: 300px;
-  left: 21px;
   border-radius: 15px;
   border: none;
 }
 
 #word {
-  position: relative;
-  top: 5px;
   margin: 10px;
   font-size: 35px;
 }
 
 #definition-container {
-  position: relative;
-  left: 10px;
   word-wrap: break-word;
 }
