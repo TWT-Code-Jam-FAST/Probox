@@ -48,6 +48,10 @@ navbar {
   z-index: 9999;
 }
 
+header * {
+  padding: 0;
+  margin: 0;
+}
 
 .main-title {
   text-align: left;
@@ -628,7 +632,100 @@ iframe {
   top: 43px;
 }
 
+#contact-tab-main-container  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  
+}
 
+
+
+#developers-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 0 40px 0;
+  margin-top: 0px;
+}
+
+
+.contact-card {
+  position: relative;
+  width: 370px;
+  height: 490px;
+  box-shadow: inset 5px 5px 5px rgba(0,0,0,0.05),
+              inset -5px -5px 5px rgba(255,255,255,0.5),
+              5px 5px 5px rgba(0,0,0,0.05),
+              -5px -5px 5px rgba(255,255,255,0.5);
+  border-radius: 15px;
+  margin: 50px; 
+}
+
+
+.about-content {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.contact-card:hover .about-content {
+  transform: translateY(-50px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  background: linear-gradient(to right top, #ff9966, #ffbb99);
+}
+
+.contact-card:hover h2 {
+  color:white;
+}
+
+.contact-card:hover p {
+  color: white;}
+
+
+.about-content h2 {
+  font-size: 1.5em;
+  color: #777;
+  z-index: 1;
+  transition: 0.5s;
+  margin:20px;
+}
+
+.about-content p {
+  font-size: 1.2em;
+  font-weight: 300;
+  color: #777;
+  z-index: 1;
+  transition: 0.5s;
+  }
+
+.about-content .github-link {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding: 15px 25px 15px 25px;
+  background: #4dc3ff;
+  margin-top: 15px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 400;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+}
+
+.other-links {
+  color: #0075FF;
+}
 
 @media only screen and (max-width: 720px) {
   .nav-element {
