@@ -2,6 +2,8 @@
 
 ![Generic badge](https://img.shields.io/badge/CodeJam-Timathon-orange.svg)  ![Platforms](https://raster.shields.io/badge/Platform-Web%20Browser-blue.png)  ![GitHub repo size](https://img.shields.io/github/repo-size/TWT-Code-Jam-FAST/Probox) ![Link](https://img.shields.io/badge/Link-https://probox.vercel.app-orange.svg)
 
+</div>
+
 # Probox, the toolbox for Programmers
 
 This is the perfect tool for any programmer! It has many features to help them in their every day life.
