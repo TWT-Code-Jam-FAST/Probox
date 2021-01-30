@@ -759,3 +759,16 @@ iframe {
     top: 43px;
   }
 }
+
+#list {
+  font-size: 1.5em;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(233, 181, 98, 0.6);
+}
+
+.list-tools {
+  display: list-item;
+}
