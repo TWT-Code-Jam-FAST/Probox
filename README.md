@@ -1,4 +1,4 @@
-<div align="center"> <img src="https://res.cloudinary.com/fireplank/image/upload/c_scale,h_250/v1611998523/Probox.png" alt="logo"> 
+<div align="center"> <img src="https://cdn.discordapp.com/attachments/794361254881525813/805119771833139230/unknown.png" alt="logo"> 
 
 ![Generic badge](https://img.shields.io/badge/CodeJam-Timathon-orange.svg)  ![Platforms](https://raster.shields.io/badge/Platform-Web%20Browser-blue.png)  ![GitHub repo size](https://img.shields.io/github/repo-size/TWT-Code-Jam-FAST/Probox) ![Link](https://img.shields.io/badge/Link-https://probox.vercel.app-orange.svg)
 
