@@ -8,3 +8,22 @@ body {
     background-color: white;
 }
 
+#voice-record-btn {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transition: translate(-50%,-50%);
+    width: 100px;
+    height: 100px;
+    border-radius:50%;
+    background-color: rgba(255,0,0,0.7);
+    border-radius: 50%;
+    border: 10px solid rgb(168, 167, 167);
+}
+
+#voice-record-btn:hover {
+    transition: 0.5s;
+    background-color: rgb(255, 0, 0);
+    border: 10px solid  rgb(154, 152, 152);
+
+}

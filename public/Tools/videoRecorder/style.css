@@ -10,6 +10,12 @@ body {
     background-color: white;
 }
 
+button:focus {
+    outline: none;
+}
+
+
+
 #record-btn {
     position: absolute;
     top: 50%;
@@ -21,6 +27,14 @@ body {
     border-radius: 50%;
     border: 10px solid rgb(168, 167, 167);
 }
+
+#record-btn:hover {
+    transition: 0.5s;
+    background-color: rgb(255, 0, 0);
+    border: 10px solid  rgb(154, 152, 152);
+
+}
+
 
 video {
     position: relative;
