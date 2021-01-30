@@ -223,7 +223,7 @@
 
     <div id="nav-tools-searcher-container">
       <div id="tools-searcher-container">
-        <input id="tools-searcher" type="text" onkeyup="searchTool()" placeholder="Search For Tools">
+        <input id="tools-searcher" type="text" onfocus="searchTool()" onblur="onBlur()" onkeyup="searchTool()" placeholder="Search For Tools">
         <svg class="search-bar" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M29.1804 31.9902L32.0088 29.1618L44.0298 41.1824L41.2014 44.0108L29.1804 31.9902Z" fill="#616161"/>
           <path d="M20 4C15.7565 4 11.6869 5.68571 8.68629 8.68629C5.68571 11.6869 4 15.7565 4 20C4 24.2435 5.68571 28.3131 8.68629 31.3137C11.6869 34.3143 15.7565 36 20 36C24.2435 36 28.3131 34.3143 31.3137 31.3137C34.3143 28.3131 36 24.2435 36 20C36 15.7565 34.3143 11.6869 31.3137 8.68629C28.3131 5.68571 24.2435 4 20 4Z" fill="#616161"/>
@@ -232,7 +232,7 @@
           <path d="M26.9 14.2C25.2 12.2 22.7 11 20 11C17.3 11 14.8 12.2 13.1 14.2C12.7 14.6 12.8 15.3 13.2 15.6C13.6 16 14.3 15.9 14.6 15.5C16 13.9 17.9 13 20 13C22.1 13 24 13.9 25.4 15.5C25.6 15.7 25.9 15.9 26.2 15.9C26.4 15.9 26.7 15.8 26.8 15.7C27.2 15.3 27.2 14.6 26.9 14.2Z" fill="#BBDEFB"/>
         </svg>
         <ul id='list' style="display: none;"> 
-          <li class="list-tools">Compiler</li> 
+          <li class="list-tools">Compiler</li>
           <li class="list-tools">Shortner</li> 
           <li class="list-tools">Dictionary</li> 
           <li class="list-tools">Calculator</li> 
