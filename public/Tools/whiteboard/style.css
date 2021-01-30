@@ -2,6 +2,8 @@
     margin: 0 auto;
     padding: 0;
     box-sizing:border-box;
+    overflow:hidden;
+    font-family: Roboto, san-serif;
 }
 
 body,html {
@@ -9,7 +11,27 @@ body,html {
 }
 
 canvas { 
-    border: 2px solid black;
     border-radius: 20px;
-    transform: translate(7px, 5px);
 }
+
+.btn {
+    color: black;
+    background: white;
+    border: 2px solid black;
+}
+
+.btn:hover {
+    background-color: #d9d9d9;
+    border: 2px solid black;
+    color: black;
+}
+
+#drawing-tools {
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+
+
+
+

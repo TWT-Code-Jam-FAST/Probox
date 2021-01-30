@@ -5,9 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ProBox - Whiteboard</title>
     <script src="whiteboard.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="../../assets/bootstrap/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="drawing-tools" class="btn-group" role="group" aria-label="drawing tools">
+      <button id="pencil" type="button" class="btn btn-secondary">Pencil</button>
+      <button id="eraser" type="button" class="btn btn-secondary">Eraser</button>
+    </div>
     <canvas id="canvas"></canvas>
   </body>
 </html>
