@@ -27,3 +27,10 @@ body {
     border: 10px solid  rgb(154, 152, 152);
 
 }
+
+#voice-recorder-container {
+    position: absolute;
+    top: 55%;
+    right: 50%;
+    transition: translate(-50%, -50%);
+}
