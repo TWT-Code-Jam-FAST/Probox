@@ -14,9 +14,11 @@ micDevice.then( (stream) => {
        datas.push(evt.data);
        if(voiceRecorder.state == "inactive") {
            let blob = new Blob(datas,{type:"audio/webm"});
+           datas = [];
            let newAudio = document.createElement("audio");
            newAudio.setAttribute("controls", "controls");
            newAudio.innerHTML = `<source src="${URL.createObjectURL(blob)}" type="video/webm"/>`;
+           audioContainer.innerHTML = "";
            audioContainer.appendChild(newAudio);
         }
     };
@@ -25,7 +27,7 @@ micDevice.then( (stream) => {
             voiceRecorder.stop();
             isRecording = false;
             recordVoiceBtn.innerHTML = "Record";
-    
+
         } else {
             voiceRecorder.start(100);
             isRecording = true;
