@@ -38,6 +38,16 @@ function openTabs(e, tabName) {
   }
 }
 
+function onBlur() {
+  document.getElementById("list").style.display = "none";
+  let titles = document.getElementsByClassName("tools-title");
+  for (i = 0; i < titles.length; i++) {
+    titles[i].innerHTML = !titles[i].innerHTML.startsWith("<mark>")
+      ? titles[i].innerHTML
+      : titles[i].innerHTML.split(">")[1];
+  }
+}
+
 function searchTool() {
   let input = document.getElementById("tools-searcher").value.trim();
   input = input.toLowerCase();
@@ -49,11 +59,20 @@ function searchTool() {
   }
   document.getElementById("list").style.display = "";
 
+  let titles = document.getElementsByClassName("tools-title");
+
   for (i = 0; i < x.length; i++) {
     if (!x[i].innerHTML.toLowerCase().includes(input)) {
       x[i].style.display = "none";
+      titles[i].innerHTML = !titles[i].innerHTML.startsWith("<mark>")
+        ? titles[i].innerHTML
+        : titles[i].innerHTML.split(">")[1];
     } else {
       x[i].style.display = "list-item";
+      titles[i].innerHTML = !titles[i].innerHTML.startsWith("<mark>")
+        ? titles[i].innerHTML
+        : titles[i].innerHTML.split(">")[1];
+      titles[i].innerHTML = "<mark>" + titles[i].innerHTML + "</mark>";
     }
   }
 }
