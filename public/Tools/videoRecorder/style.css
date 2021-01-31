@@ -41,3 +41,9 @@ video {
     top: 50px;
     left: 50px;
 }
+
+
+p {
+    color: red;
+    transform: translate(5%, 2%);
+}
