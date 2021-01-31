@@ -1,6 +1,8 @@
-const Storage = window.localStorage;
+var Storage, cm, fetchData, lang, reset, submit, update;
 
-let cm = new CodeMirror.fromTextArea(document.getElementById("compiler-ip"), {
+Storage = window.localStorage;
+
+cm = new CodeMirror.fromTextArea(document.getElementById("compiler-ip"), {
   lineNumbers: true,
   mode: "javascript",
   theme: "dracula",
@@ -9,56 +11,63 @@ let cm = new CodeMirror.fromTextArea(document.getElementById("compiler-ip"), {
   autoCloseBrackets: true,
 });
 
-cm.setValue(JSCODE);
-
-cm.setSize("auto", window.innerHeight);
-
-const fetchData = async (code, lang) => {
-  const req = await fetch(
+fetchData = async function (code, lang) {
+  var msg, newData, req;
+  req = await fetch(
     `https://Wandbox-API.snowballsh.repl.co?code=${encodeURIComponent(
       code
     )}&lang=${encodeURIComponent(lang)}`
   );
-  const newData = await req.json();
-
-  const msg = newData.program_message || newData.compiler_message || "";
-
+  newData = await req.json();
+  msg = newData.program_message || newData.compiler_message || "";
   document.getElementById("msg").innerHTML = msg
     .replaceAll("\n", "<br>")
     .replaceAll(" ", "&nbsp");
   document.getElementById("runbtn").innerHTML = "Run";
-  document.getElementById("runbtn").classList = "btn btn-success";
+  return (document.getElementById("runbtn").classList = "btn btn-success");
 };
 
-function submit() {
+submit = function () {
+  var code;
   document.getElementById("runbtn").innerHTML = "Compiling...";
   document.getElementById("runbtn").classList = "btn btn-info";
-  const code = cm.getValue();
+  code = cm.getValue();
   update();
   fetchData(code, lang);
-}
+};
 
-var lang = "nodejs-head";
-
-function update() {
-  const input = document.getElementById("select");
-  const theme = input.options[input.selectedIndex].value;
+update = function () {
+  var input, theme;
+  input = document.getElementById("select");
+  theme = input.options[input.selectedIndex].value;
   cm.setOption("theme", theme.trim().toLowerCase());
   localStorage.setItem("SAVETHEME", input.selectedIndex);
   localStorage.setItem("SAVELANG", lang);
   localStorage.setItem("SAVECODE", cm.getValue());
-}
+};
+
+reset = function () {
+  localStorage.clear();
+};
+
+cm.setValue(JSCODE);
+
+cm.setSize("auto", window.innerHeight);
+
+lang = "nodejs-head";
 
 $(document).ready(function () {
-  if ((t = localStorage.getItem("SAVETHEME")))
+  var co, i, j, l, m, t, temp;
+  if ((t = localStorage.getItem("SAVETHEME"))) {
     document.getElementById("select").selectedIndex = t;
+  }
   cm.on("change", update);
   if ((l = localStorage.getItem("SAVELANG"))) {
     lang = l;
-    var temp = JSCODE;
-    var i = 1;
-    var j = "js";
-    var m = "javascript";
+    temp = JSCODE;
+    i = 1;
+    j = "js";
+    m = "javascript";
     switch (l) {
       case "cpython-head":
         temp = PYCODE;
@@ -89,9 +98,10 @@ $(document).ready(function () {
         i = 5;
         j = "lua";
         m = "lua";
-        break;
     }
-    if ((co = localStorage.getItem("SAVECODE"))) temp = co;
+    if ((co = localStorage.getItem("SAVECODE"))) {
+      temp = co;
+    }
     $("#tab-" + i).tab("show");
     $("#select-" + j).tab("show");
     cm.setValue(temp);
@@ -134,10 +144,5 @@ $(document).ready(function () {
     update();
   });
   update();
-
   $("select").on("change", update);
 });
-
-function reset() {
-  localStorage.clear();
-}
