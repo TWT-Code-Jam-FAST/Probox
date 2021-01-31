@@ -1,6 +1,6 @@
 var canvas = document.querySelector("#canvas");
 var ctx = canvas.getContext("2d");
-var penColor = "black"
+var penColor = "black";
 var pencilBtn = document.getElementById("pencil");
 var eraserBtn = document.getElementById("eraser");
 var resetBtn = document.getElementById("reset");
@@ -9,10 +9,9 @@ var dataUrl;
 var penWidth=10;
 
 
-
-function setWidthAndHeight(){
-    canvas.height = window.innerHeight-20;
-    canvas.width = window.innerWidth-20;
+function setWidthAndHeight() {
+  canvas.height = window.innerHeight - 20;
+  canvas.width = window.innerWidth - 20;
 }
 
 window.addEventListener("load", () => {
