@@ -1,8 +1,16 @@
-<div align="center"> <img src="https://cdn.discordapp.com/attachments/794361254881525813/805119771833139230/unknown.png" alt="logo"> 
+<br>
 
-![Generic badge](https://img.shields.io/badge/CodeJam-Timathon-orange.svg)  ![Platforms](https://raster.shields.io/badge/Platform-Web%20Browser-blue.png)  ![GitHub repo size](https://img.shields.io/github/repo-size/TWT-Code-Jam-FAST/Probox) ![Link](https://img.shields.io/badge/Link-https://probox.vercel.app-orange.svg)
+<div align="center">
+  <img src="https://cdn.discordapp.com/attachments/794361254881525813/805153976847695922/icon.png" alt="logo">
+
+  <br>
+  <br>
+
+![Generic badge](https://img.shields.io/badge/CodeJam-Timathon-orange.svg) ![Platforms](https://raster.shields.io/badge/Platform-Web%20Browser-blue.png) ![GitHub repo size](https://img.shields.io/github/repo-size/TWT-Code-Jam-FAST/Probox) ![Link](https://img.shields.io/badge/Link-https://probox.vercel.app-orange.svg)
 
 </div>
+
+<br>
 
 # Probox, the toolbox for Programmers
 
@@ -27,6 +35,7 @@ https://probox.vercel.app/
 - TODO List: So you will never forgot what you needed to do next!
 
 ## Contributions
+
 We love your open source enthusiasm. Seeing an website grow a bigger community is possibly the best thing a developer can expect. However, as this project is a part of the "Third Timathon Code Jam", we are not allowed to make any changes to the app after the submission time ends. So, we won't be merging any pull requests.
 
 However, once the judgement phase finishes, we will start accepting pull requests. 😉
