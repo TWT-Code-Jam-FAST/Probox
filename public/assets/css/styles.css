@@ -678,25 +678,17 @@ iframe {
   }
 }
 
-@media only screen and (max-width: 1170px) {
+
+@media only screen and (max-width: 1200px) {
   #code-board {
     position: fixed;
     width: 700px;
-    height: 460px;
+    height: 360px;
     right: 40px;
   }
 
   #person-on-wave {
-    position: fixed;
-    right: 150px;
-    top: 86px;
-    z-index: 9;
-  }
-}
-@media only screen and (max-width: 974px) {
-  #code-board,
-  #person-on-wave {
-    display: none;
+    display:none;
   }
 }
 
@@ -758,6 +750,19 @@ iframe {
     top: 43px;
   }
 }
+
+@media only screen and (max-width: 1105px) {
+  #code-board {display:none;}
+  #title-text-container {
+    left: 20%;
+  }
+
+  #tryOutToolsButton {
+    position: absolute;
+   left: 22%; 
+  }
+}
+
 
 #list {
   font-size: 1.5em;
