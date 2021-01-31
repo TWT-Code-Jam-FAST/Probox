@@ -10,8 +10,6 @@
 
 </div>
 
-<br>
-
 # Probox, the toolbox for Programmers
 
 This is the perfect tool for any programmer! It has many features to help them in their every day life.
