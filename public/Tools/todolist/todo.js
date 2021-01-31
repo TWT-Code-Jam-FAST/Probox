@@ -5,7 +5,7 @@
     var todoListItem = $(".todo-list");
     var todoListInput = $(".todo-list-input");
     document.getElementById("main-list").innerHTML =
-      Storage.getItem("TODO_HTML").trim() ||
+      Storage.getItem("TODO_HTML") ||
       document.getElementById("main-list").innerHTML;
     $(".todo-list-add-btn").on("click", function (event) {
       event.preventDefault();
