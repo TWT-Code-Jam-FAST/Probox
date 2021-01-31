@@ -34,25 +34,24 @@ function submit() {
   document.getElementById("runbtn").innerHTML = "Compiling...";
   document.getElementById("runbtn").classList = "btn btn-info";
   const code = cm.getValue();
-  localStorage.setItem("SAVECODE", code);
+  update();
   fetchData(code, lang);
-}
-
-function selectTheme() {
-  const input = document.getElementById("select");
-  const theme = input.options[input.selectedIndex].value;
-  cm.setOption("theme", theme.trim().toLowerCase());
-  localStorage.setItem("SAVETHEME", theme);
 }
 
 var lang = "nodejs-head";
 
 function update() {
+  const input = document.getElementById("select");
+  const theme = input.options[input.selectedIndex].value;
+  cm.setOption("theme", theme.trim().toLowerCase());
+  localStorage.setItem("SAVETHEME", input.selectedIndex);
   localStorage.setItem("SAVELANG", lang);
   localStorage.setItem("SAVECODE", cm.getValue());
 }
 
 $(document).ready(function () {
+  if ((t = localStorage.getItem("SAVETHEME")))
+    document.getElementById("select").selectedIndex = t;
   cm.on("change", update);
   if ((l = localStorage.getItem("SAVELANG"))) {
     lang = l;
@@ -136,7 +135,7 @@ $(document).ready(function () {
   });
   update();
 
-  $("select").on("change", selectTheme);
+  $("select").on("change", update);
 });
 
 function reset() {
