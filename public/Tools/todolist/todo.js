@@ -53,3 +53,28 @@
     });
   });
 })(jQuery);
+
+function resetStorage() {
+  const Storage = window.localStorage;
+  Storage.clear();
+  const temp = `<li class="completed">
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="checkbox" type="checkbox" checked="" />
+                          Watch some Tech With Tim videos
+                          <i class="input-helper"></i
+                        ></label>
+                      </div>
+                      <i class="remove mdi mdi-close-circle-outline"></i>
+                    </li>
+                    <li>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="checkbox" type="checkbox" /> Learn
+                          React.js <i class="input-helper"></i
+                        ></label>
+                      </div>
+                      <i class="remove mdi mdi-close-circle-outline"></i>
+                    </li>`;
+  document.getElementById("main-list").innerHTML = temp;
+}
