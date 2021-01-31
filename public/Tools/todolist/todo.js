@@ -1,11 +1,19 @@
 (function ($) {
   "use strict";
   $(function () {
+    const Storage = window.localStorage;
     var todoListItem = $(".todo-list");
     var todoListInput = $(".todo-list-input");
+    document.getElementById("main-list").innerHTML =
+      Storage.getItem("TODO_HTML").trim() ||
+      document.getElementById("main-list").innerHTML;
     $(".todo-list-add-btn").on("click", function (event) {
       event.preventDefault();
 
+      Storage.setItem(
+        "TODO_HTML",
+        document.getElementById("main-list").innerHTML
+      );
       var item = $(this).prevAll(".todo-list-input").val();
 
       if (item) {
@@ -30,10 +38,18 @@
       }
 
       $(this).closest("li").toggleClass("completed");
+      Storage.setItem(
+        "TODO_HTML",
+        document.getElementById("main-list").innerHTML
+      );
     });
 
     todoListItem.on("click", ".remove", function () {
       $(this).parent().remove();
+      Storage.setItem(
+        "TODO_HTML",
+        document.getElementById("main-list").innerHTML
+      );
     });
   });
 })(jQuery);
