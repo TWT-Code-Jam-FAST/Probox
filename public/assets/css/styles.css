@@ -493,8 +493,7 @@ h2.text2 {
 .general-tool {
   display: inline;
   float: left;
-  margin: 5px;
-  margin: 25px;
+  margin: 30px;
 }
 
 .tools-icon:hover {
