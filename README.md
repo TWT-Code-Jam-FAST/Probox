@@ -34,6 +34,5 @@ https://probox.vercel.app/
 
 ## Contributions
 
-We love your open source enthusiasm. Seeing an website grow a bigger community is possibly the best thing a developer can expect. However, as this project is a part of the "Third Timathon Code Jam", we are not allowed to make any changes to the app after the submission time ends. So, we won't be merging any pull requests.
-
-However, once the judgement phase finishes, we will start accepting pull requests. 😉
+We love your open source enthusiasm. Seeing an website grow a bigger community is possibly the best thing a developer can expect.
+The Code Jam is now officially over. Therefore, we now accept any kind of pull requests - Doc, UI, Bug fixes - feel free to make prs!
