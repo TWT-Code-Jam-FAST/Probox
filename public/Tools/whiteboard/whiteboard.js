@@ -51,9 +51,6 @@ window.addEventListener("load", () => {
 });
 
 window.addEventListener("resize", () => {
-  //  try
- //       {localStorage.removeItem("drawing");}
-//    catch{}
     localStorage.setItem("drawing", canvas.toDataURL());
     setWidthAndHeight();
     dataUrl = localStorage.getItem("drawing");
